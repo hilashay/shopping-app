@@ -5,22 +5,13 @@ import Form from "./components/Form";
 import Reviews from "./components/Reviews";
 import "./";
 import styled from "styled-components";
+import Header from "./components/Header";
 
 function App() {
   return (
     <Router>
       <AppContainer>
-        <nav>
-          <LinkContainer>
-            <NavbarLink to="/">Home</NavbarLink>
-          </LinkContainer>
-          <LinkContainer>
-            <NavbarLink to="/Form">Form</NavbarLink>
-          </LinkContainer>
-          <LinkContainer>
-            <NavbarLink to="/Reviews">Reviews</NavbarLink>
-          </LinkContainer>
-        </nav>
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/Form" element={<Form />} />
@@ -33,18 +24,6 @@ function App() {
 
 export default App;
 
-const LinkContainer = styled.div`
-  display: inline-block;
-  padding: 0 10px;
-`;
-
-const NavbarLink = styled(Link)`
-  text-decoration: none;
-  font-size: smaller;
-  :hover {
-    color: gray;
-  }
-`;
 const AppContainer = styled.div`
   display: flex;
   background-color: #e6ddf2;
