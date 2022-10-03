@@ -1,24 +1,16 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Home from "./components/Home";
-import Form from "./components/Form";
-import Reviews from "./components/Reviews";
-import "./";
+import { BrowserRouter } from "react-router-dom";
 import styled from "styled-components";
-import Header from "./components/Header";
+import Header from "./modules/Header";
+import Router from "./Router";
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <AppContainer>
         <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/Form" element={<Form />} />
-          <Route path="/Reviews" element={<Reviews />} />
-        </Routes>
+        <Router />
       </AppContainer>
-    </Router>
+    </BrowserRouter>
   );
 }
 
