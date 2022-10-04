@@ -1,9 +1,6 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-
 const Reviews = () => {
   return (
-    <div>
+    <div style={{ height: 1000 }} id="reviews-section">
       <h1>Reviews</h1>
     </div>
   );
