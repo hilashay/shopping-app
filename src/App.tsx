@@ -4,6 +4,7 @@ import Header from "./modules/Header/Header";
 import Router from "./Router";
 import Home from "./modules/Home/Home";
 import Form from "./modules/Form";
+import HowItWorks from "./modules/HowItWorks/HowItWorks";
 import Reviews from "./modules/Reviews";
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
         <Header />
         {/* <Router /> */}
         <Home />
-        <Form />
+        <HowItWorks />
         <Reviews />
       </AppContainer>
     </BrowserRouter>

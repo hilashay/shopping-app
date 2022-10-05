@@ -22,6 +22,7 @@ const Container = styled.header`
   padding: 28px;
   position: fixed;
   background-color: white;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 10%), 0 6px 20px 0 rgb(0 0 0 / 1%);
 `;
 
 const Logo = styled.h2`
