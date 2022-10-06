@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "./modules/Home/Home";
 import Form from "./modules/Form";
-import Reviews from "./modules/Reviews";
+import Reviews from "./modules/About/About";
 
 const Router = () => {
   return (

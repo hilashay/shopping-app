@@ -5,7 +5,8 @@ import Router from "./Router";
 import Home from "./modules/Home/Home";
 import Form from "./modules/Form";
 import HowItWorks from "./modules/HowItWorks/HowItWorks";
-import Reviews from "./modules/Reviews";
+import About from "./modules/About/About";
+import Reviews from "./modules/Reviews/Reviews";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         {/* <Router /> */}
         <Home />
         <HowItWorks />
+        <About />
         <Reviews />
       </AppContainer>
     </BrowserRouter>

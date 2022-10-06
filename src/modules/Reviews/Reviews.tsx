@@ -1,17 +1,15 @@
 import styled from "styled-components";
 import { SectionContainer } from "../../components/General.styled";
-import StepsSection from "./StepsSection";
 
-const HowItWorks = () => {
+const Reviews = () => {
   return (
     <SectionContainer id="form-section">
-      <H1>How it works?</H1>
-      <StepsSection />
+      <H1>Reviews</H1>
     </SectionContainer>
   );
 };
 
-export default HowItWorks;
+export default Reviews;
 
 const H1 = styled.h1`
   text-align: center;
