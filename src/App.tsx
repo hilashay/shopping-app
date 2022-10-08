@@ -6,7 +6,8 @@ import Home from "./modules/Home/Home";
 import Form from "./modules/Form";
 import HowItWorks from "./modules/HowItWorks/HowItWorks";
 import About from "./modules/About/About";
-import Reviews from "./modules/Reviews/Reviews";
+// import Reviews from "./modules/Reviews/Reviews";
+import Footer from "./modules/Footer/Footer";
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
         <Home />
         <HowItWorks />
         <About />
-        <Reviews />
+        {/* <Reviews /> */}
+        <Footer />
       </AppContainer>
     </BrowserRouter>
   );

@@ -1,18 +1,25 @@
 import styled from "styled-components";
 import { SectionContainer } from "../../components/General.styled";
-import StepsSection from "./StepsSection";
+import Steps from "./Steps";
 
 const HowItWorks = () => {
   return (
-    <SectionContainer id="form-section">
-      <H1>How it works?</H1>
-      <StepsSection />
-    </SectionContainer>
+    <Container id="form-section">
+      <Title>How it works?</Title>
+      <Steps />
+    </Container>
   );
 };
 
 export default HowItWorks;
 
-const H1 = styled.h1`
+const Container = styled(SectionContainer)`
+  display: flex;
+  flex-direction: column;
+`;
+
+const Title = styled.h1`
+  font-size: 39px;
   text-align: center;
+  margin: 37px 0 26px;
 `;

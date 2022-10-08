@@ -6,7 +6,6 @@ const Header = () => {
   return (
     <Container>
       <Img src={logo} alt="error" />
-      {/* <Logo>My App</Logo> */}
       <Nav />
     </Container>
   );
@@ -33,7 +32,7 @@ const Logo = styled.h2`
 `;
 
 const Img = styled.img`
-  height: 70px;
+  height: 68px;
   width: 85px;
   position: absolute;
   top: 10px;

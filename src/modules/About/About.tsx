@@ -1,24 +1,22 @@
 import styled from "styled-components";
-import CardSection from "./CardSection";
-import ImgAndTextSection from "./ImgAndTextSection";
+import Description from "./Description";
+import ImgAndTextSection from "./ImgAndText";
 
 const About = () => {
   return (
-    <div style={{ height: 1000 }} id="reviews-section">
-      <AboutContainer>
-        <ImgAndTextSection />
-        <CardSection />
-      </AboutContainer>
-    </div>
+    <AboutContainer id="about-section">
+      <ImgAndTextSection />
+      <Description />
+      {/* <CardSection /> */}
+    </AboutContainer>
   );
 };
 
 export default About;
 
 const AboutContainer = styled.div`
-  height: 735px;
-  // margin-top: 100px;
+  padding: 0 135px 0;
   background-color: #fff7f4;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
 `;
