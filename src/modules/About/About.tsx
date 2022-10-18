@@ -1,13 +1,12 @@
 import styled from "styled-components";
 import Description from "./Description";
-import ImgAndTextSection from "./ImgAndText";
+import ImgSection from "./Img";
 
 const About = () => {
   return (
     <AboutContainer id="about-section">
-      <ImgAndTextSection />
+      <ImgSection />
       <Description />
-      {/* <CardSection /> */}
     </AboutContainer>
   );
 };

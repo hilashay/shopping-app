@@ -1,7 +1,6 @@
 import styled from "styled-components";
-import { SectionContainer } from "../../components/General.styled";
 
-const ImgAndTextSection = () => {
+const ImgSection = () => {
   return (
     <ImgContainer>
       <MainImg
@@ -12,7 +11,7 @@ const ImgAndTextSection = () => {
   );
 };
 
-export default ImgAndTextSection;
+export default ImgSection;
 
 const MainImg = styled.img`
   height: 320px;

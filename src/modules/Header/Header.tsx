@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import { Nav } from "./Nav";
 import logo from "../../../src/images/logo.png";
+import { Nav } from "./Nav";
 
 const Header = () => {
   return (
     <Container>
-      <Img src={logo} alt="error" />
+      <Image src={logo} alt="error" />
       <Nav />
     </Container>
   );
@@ -24,14 +24,7 @@ const Container = styled.header`
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 10%), 0 6px 20px 0 rgb(0 0 0 / 1%);
 `;
 
-const Logo = styled.h2`
-  position: absolute;
-  top: 10px;
-  left: 135px;
-  color: red;
-`;
-
-const Img = styled.img`
+const Image = styled.img`
   height: 68px;
   width: 85px;
   position: absolute;
