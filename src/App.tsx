@@ -4,6 +4,7 @@ import About from "./modules/About/About";
 import Header from "./modules/Header/Header";
 import Home from "./modules/Home/Home";
 import HowItWorks from "./modules/HowItWorks/HowItWorks";
+import Reviews from "./modules/Reviews/Reviews";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Home />
         <HowItWorks />
         <About />
+        <Reviews />
       </AppContainer>
     </BrowserRouter>
   );

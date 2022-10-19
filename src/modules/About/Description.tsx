@@ -1,10 +1,18 @@
 import styled from "styled-components";
+import { Button } from "../../components/General.styled";
 
 const Description = () => {
   return (
     <Container>
       <PageLabel>About us</PageLabel>
-      <Title>We Are Making Ideas Better For Everyone</Title>
+      <Title>
+        <LinesStyle>
+          We Are <span style={{ color: "#FF5300" }}>Making</span>
+        </LinesStyle>
+        <LinesStyle>
+          <span style={{ color: "#FF5300" }}>Ideas Better</span> For Everyone
+        </LinesStyle>
+      </Title>
       <Text>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nascetur imperdiet at a augue
         ullamcorper. Leo faucibus feugiat rutrum aenean. Nisi, lectus aliquet aliquam consectetur
@@ -35,23 +43,16 @@ const PageLabel = styled.h6`
 
 const Title = styled.h1`
   color: #000000;
-  font-size: 39px;
+  width: 494px;
+  padding-bottom: 18px;
+`;
+
+const LinesStyle = styled.h2`
+  font-size: 40px;
 `;
 
 const Text = styled.div`
   color: gray;
   font-size: 15px;
   width: 450px;
-`;
-
-const Button = styled.button`
-  height: 50px;
-  width: 150px;
-  background-color: #ff5300;
-  border-radius: 5px;
-  border-width: inherit;
-  cursor: pointer;
-  color: white;
-  margin-top: 38px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 `;
