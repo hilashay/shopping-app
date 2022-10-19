@@ -2,43 +2,43 @@ import styled from "styled-components";
 
 const Description = () => {
   return (
-    <TextContainer>
-      <FirstTitle>About us</FirstTitle>
-      <MainTitle>We Are Making Ideas Better For Everyone</MainTitle>
-      <MainText>
+    <Container>
+      <PageLabel>About us</PageLabel>
+      <Title>We Are Making Ideas Better For Everyone</Title>
+      <Text>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nascetur imperdiet at a augue
         ullamcorper. Leo faucibus feugiat rutrum aenean. Nisi, lectus aliquet aliquam consectetur
         augue praesent. Lorem vulputate orci eget mi, sed pulvinar. Ornare etiam erat volutpat
         tempor fringilla mi. Elit a blandit faucibus est, dui interdum ut amet. Adipiscing feugiat
         vel at posuere in. Pellentesque volutpat vestibulum.
-      </MainText>
+      </Text>
       <Button>Dress me!</Button>
-    </TextContainer>
+    </Container>
   );
 };
 
 export default Description;
 
-const TextContainer = styled.div`
+const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 50%;
   padding: 49px 0 93px;
 `;
 
-const FirstTitle = styled.h6`
+const PageLabel = styled.h6`
   color: gray;
   font-size: 15px;
   margin-bottom: 10px;
   width: 400px;
 `;
 
-const MainTitle = styled.h1`
+const Title = styled.h1`
   color: #000000;
   font-size: 39px;
 `;
 
-const MainText = styled.div`
+const Text = styled.div`
   color: gray;
   font-size: 15px;
   width: 450px;
