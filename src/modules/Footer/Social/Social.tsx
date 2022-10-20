@@ -26,6 +26,7 @@ const Container = styled.div`
   width: 263px;
   color: #fff7f4;
   padding-right: 37px;
+  padding-bottom: 60px;
 `;
 
 const Title = styled.h2`
@@ -37,7 +38,7 @@ const Span = styled.span`
 `;
 
 const Text = styled.p`
-  height: 95px;
+  height: 95px; // TRADE OFF: insted of give it 102 px I give it less to make the icons be closer and at the same line as the last link in "Menu" - "Contact us"
   font-size: 16px;
   padding-top: 25px;
   white-space: pre;

@@ -31,7 +31,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: left;
-  margin: 56px 135px 135px 130px;
+  margin: 56px 135px 135px 130px; // TREADE OFF: this container and the main container - both accept 135px of padding+margin left- i prefer that the first card will end at the word "Words" insted get space of 135 left and end before the title start
 `;
 
 const ContentContainer = styled.div`
@@ -64,7 +64,7 @@ const JobName = styled.h3`
 `;
 
 const Text = styled.div`
-  width: 370px;
+  width: 370px; // TREADE OFF: left it 370 even it dosent break at the exact word
   color: white;
   font-size: 16px;
   margin-right: 35px;
