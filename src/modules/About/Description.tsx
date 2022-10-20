@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Button } from "../../components/General.styled";
+import { Button, Span } from "../../components/General.styled";
 
 const Description = () => {
   return (
@@ -7,10 +7,10 @@ const Description = () => {
       <PageLabel>About us</PageLabel>
       <Title>
         <LinesStyle>
-          We Are <span style={{ color: "#FF5300" }}>Making</span>
+          We Are <Span>Making</Span>
         </LinesStyle>
         <LinesStyle>
-          <span style={{ color: "#FF5300" }}>Ideas Better</span> For Everyone
+          <Span>Ideas Better</Span> For Everyone
         </LinesStyle>
       </Title>
       <Text>

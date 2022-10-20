@@ -1,13 +1,13 @@
 import styled from "styled-components";
 import { SectionContainer } from "../../components/General.styled";
-import Cards from "./Cards/Cards";
+import ReviewsList from "./Cards/ReviewsList";
 import Title from "./Title";
 
 const Reviews = () => {
   return (
     <Container>
       <Title />
-      <Cards />
+      <ReviewsList />
     </Container>
   );
 };

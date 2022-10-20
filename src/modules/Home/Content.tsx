@@ -1,10 +1,11 @@
 import styled from "styled-components";
+import { Span } from "../../components/General.styled";
 
 const Content = () => {
   return (
     <Container>
       <Title>
-        We Are The Best <span style={{ color: "#FF5300" }}>Digital Agency</span> for business
+        We Are The Best <Span>Digital Agency</Span> for business
       </Title>
       <SubTitle>
         Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia

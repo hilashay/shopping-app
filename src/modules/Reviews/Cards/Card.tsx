@@ -11,11 +11,11 @@ const Card = ({ imageUrl, name, jobName, text }: CardProps) => {
   return (
     <Container>
       <Image src={imageUrl} alt="error"></Image>
-      <ContentContainer>
+      <ReviewerInfo>
         <Name>{name}</Name>
         <JobName>{jobName}</JobName>
         <Text>{text}</Text>
-      </ContentContainer>
+      </ReviewerInfo>
     </Container>
   );
 };
@@ -34,7 +34,7 @@ const Container = styled.div`
   margin: 56px 135px 135px 130px;
 `;
 
-const ContentContainer = styled.div`
+const ReviewerInfo = styled.div`
   margin-top: 35px;
   margin-bottom: 50px;
   margin-left: 65px;
@@ -49,14 +49,14 @@ const Image = styled.img`
   top: 20px;
 `;
 
-const Name = styled.h3`
+const Name = styled.p`
   color: white;
   font-size: 25px;
   margin-top: 10px;
   margin-bottom: 7px;
 `;
 
-const JobName = styled.h3`
+const JobName = styled.p`
   color: white;
   font-size: 16px;
   margin-top: 10px;

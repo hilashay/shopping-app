@@ -1,14 +1,15 @@
 import styled from "styled-components";
+import { Span } from "../../components/General.styled";
 
 const Title = () => {
   return (
     <Container>
-      <LinesStyle>
-        Some <span style={{ color: "#FF5300" }}>Great</span>
-      </LinesStyle>
-      <LinesStyle>
-        <span style={{ color: "#FF5300" }}>Words</span> From Our Clients
-      </LinesStyle>
+      <TextRow>
+        Some <Span>Great</Span>
+      </TextRow>
+      <TextRow>
+        <Span>Words</Span> From Our Clients
+      </TextRow>
     </Container>
   );
 };
@@ -19,7 +20,7 @@ const Container = styled.h2`
   width: 460px;
 `;
 
-const LinesStyle = styled.h2`
+const TextRow = styled.h2`
   font-size: 40px;
   text-align: center;
 `;
