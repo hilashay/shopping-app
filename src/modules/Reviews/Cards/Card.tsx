@@ -31,6 +31,7 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: left;
+  margin: 56px 135px 135px 130px;
 `;
 
 const ContentContainer = styled.div`

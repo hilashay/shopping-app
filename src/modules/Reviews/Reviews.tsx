@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { SectionContainer } from "../../components/General.styled";
-import Cards from "./Cards";
+import Cards from "./Cards/Cards";
 import Title from "./Title";
 
 const Reviews = () => {
