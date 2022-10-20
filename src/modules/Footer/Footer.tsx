@@ -1,20 +1,29 @@
 import styled from "styled-components";
 import { SectionContainer } from "../../components/General.styled";
-import Menu from "./Social/Menu/Menu";
+import Menu from "./Menu/Menu";
+import BottomFooter from "./Social/BottomFooter";
 import Social from "./Social/Social";
 
 const Footer = () => {
   return (
     <Container>
-      <Social />
-      <Menu />
+      <TopContainer>
+        <Social />
+        <Menu />
+      </TopContainer>
+      <BottomFooter />
     </Container>
   );
 };
 
 export default Footer;
 
-const Container = styled(SectionContainer)`
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const TopContainer = styled(SectionContainer)`
   display: flex;
   flex-direction: row;
   background: #373737;
