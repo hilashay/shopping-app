@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Card from "./Card";
 import Carousel from "nuka-carousel";
 
-const cards = [
+const cards: Array<{ imageUrl: string; name: string; jobName: string; text: string }> = [
   {
     imageUrl: "https://i.pinimg.com/564x/cf/32/5d/cf325d12d80120757b2e0b7db1e2f9a2.jpg",
     name: "Hila Shay",
