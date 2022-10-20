@@ -36,30 +36,36 @@ const Cards = () => {
     ));
 
   return (
-    <Container
-      slidesToShow={2}
-      slidesToScroll={2}
-      slideIndex={0}
-      defaultControlsConfig={{
-        nextButtonStyle: { display: "none" },
-        prevButtonStyle: { display: "none" },
-        pagingDotsStyle: {
-          fill: "#ff5300",
-          transform: "scale(1.5)",
-        },
-      }}
-    >
-      {renderCards()}
+    <Container>
+      <CarouselContainer
+        slidesToShow={2}
+        slidesToScroll={2}
+        slideIndex={0}
+        defaultControlsConfig={{
+          nextButtonStyle: { display: "none" },
+          prevButtonStyle: { display: "none" },
+          pagingDotsStyle: {
+            fill: "#ff5300",
+            transform: "scale(1.5)",
+          },
+        }}
+      >
+        {renderCards()}
+      </CarouselContainer>
     </Container>
   );
 };
 
 export default Cards;
 
-const Container = styled(Carousel)`
+const CarouselContainer = styled(Carousel)`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+`;
+
+const Container = styled.div`
+  padding-bottom: 83px;
   width: 100%; // Question: on about i shouldnt add "width", but here without width theres no option to add space between the cards.****
 `;
