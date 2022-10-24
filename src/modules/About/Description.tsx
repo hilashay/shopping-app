@@ -6,12 +6,12 @@ const Description = () => {
     <Container>
       <PageLabel>About us</PageLabel>
       <Title>
-        <LinesStyle>
+        <TextRow>
           We Are <Span>Making</Span>
-        </LinesStyle>
-        <LinesStyle>
+        </TextRow>
+        <TextRow>
           <Span>Ideas Better</Span> For Everyone
-        </LinesStyle>
+        </TextRow>
       </Title>
       <Text>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nascetur imperdiet at a augue
@@ -47,7 +47,7 @@ const Title = styled.h1`
   padding-bottom: 18px;
 `;
 
-const LinesStyle = styled.h2`
+const TextRow = styled.h2`
   font-size: 40px;
 `;
 

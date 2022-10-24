@@ -1,7 +1,12 @@
 import styled from "styled-components";
 import Card from "./Card";
 
-const cards = [
+export interface CardProps {
+  imageUrl: string;
+  text: string;
+}
+
+const cards: CardProps[] = [
   {
     imageUrl: "https://i.pinimg.com/564x/34/4f/ab/344fabadbf096629aea1df4ce0bc6979.jpg",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. enim.",

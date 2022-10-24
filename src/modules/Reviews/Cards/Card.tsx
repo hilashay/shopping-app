@@ -1,11 +1,5 @@
 import styled from "styled-components";
-
-interface CardProps {
-  imageUrl: string;
-  name: string;
-  jobName: string;
-  text: string;
-}
+import { CardProps } from "./ReviewsList";
 
 const Card = ({ imageUrl, name, jobName, text }: CardProps) => {
   return (
