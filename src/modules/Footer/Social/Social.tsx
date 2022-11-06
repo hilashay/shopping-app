@@ -10,7 +10,7 @@ const Social = () => {
   return (
     <Container>
       <Title>
-        <Span>Digie</Span>
+        <Span>Digie</Span>ncy
       </Title>
       <Text>{text}</Text>
       <Icons />
