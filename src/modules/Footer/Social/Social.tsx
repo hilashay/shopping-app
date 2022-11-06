@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Icons from "./Icons";
-
+import { Span } from "../../../components/General.styled";
 const text = `Lorem ipsum dolor sit amet,
 consectetur adipiscing elit. Sit a
 laoreet libero dis eget maecenas
@@ -31,10 +31,6 @@ const Container = styled.div`
 
 const Title = styled.h2`
   font-size: 40px;
-`;
-
-const Span = styled.span`
-  color: #ff5300;
 `;
 
 const Text = styled.p`

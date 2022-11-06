@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const icons = [
+const icons: Array<{ ImageUrl: string; alt: string }> = [
   {
     ImageUrl: "https://i.pinimg.com/564x/4a/94/77/4a9477bede69bbce3300e20588b28ebf.jpg",
     alt: "facebook",

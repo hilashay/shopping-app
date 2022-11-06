@@ -24,7 +24,6 @@ const Container = styled.div`
 `;
 
 const TopContainer = styled(SectionContainer)`
-  display: flex;
   flex-direction: row;
   background: #373737;
   padding-top: 66px;
