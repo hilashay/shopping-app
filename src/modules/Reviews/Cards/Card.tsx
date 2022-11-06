@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { CardProps } from "./ReviewsList";
 
 interface CardProps {
   imageUrl: string;
@@ -11,11 +12,11 @@ const Card = ({ imageUrl, name, jobName, text }: CardProps) => {
   return (
     <Container>
       <Image src={imageUrl} alt="error"></Image>
-      <ContentContainer>
+      <ReviewerInfo>
         <Name>{name}</Name>
         <JobName>{jobName}</JobName>
         <Text>{text}</Text>
-      </ContentContainer>
+      </ReviewerInfo>
     </Container>
   );
 };
@@ -31,6 +32,8 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: left;
+  
+const ReviewerInfo = styled.div`
   margin: 56px 135px 135px 130px; // TREADE OFF: this container and the main container - both accept 135px of padding+margin left- i prefer that the first card will end at the word "Words" insted get space of 135 left and end before the title start
 `;
 
@@ -49,14 +52,15 @@ const Image = styled.img`
   top: 20px;
 `;
 
-const Name = styled.h3`
+
+const Name = styled.p`
   color: white;
   font-size: 25px;
   margin-top: 10px;
   margin-bottom: 7px;
 `;
 
-const JobName = styled.h3`
+const JobName = styled.p`
   color: white;
   font-size: 16px;
   margin-top: 10px;

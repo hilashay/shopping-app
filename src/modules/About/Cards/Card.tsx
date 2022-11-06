@@ -1,9 +1,5 @@
 import styled from "styled-components";
-
-interface CardProps {
-  imageUrl: string;
-  text: string;
-}
+import { CardProps } from "./Cards";
 
 const Card = ({ imageUrl, text }: CardProps) => (
   <Container>
