@@ -14,3 +14,18 @@ h5,
 h6 {
   margin: 0;
 }
+
+.slider-container {
+  width: 1300px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slide {
+  margin-left: 100px;
+  margin-right: 80px;
+}
+
+/* .slide-visible {
+  margin-left: 170px;
+} */

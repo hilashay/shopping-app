@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Card from "./Card";
+import Card from "./ReviewItem";
 import Carousel from "nuka-carousel";
 
 export interface CardProps {
@@ -36,7 +36,7 @@ const cards: CardProps[] = [
   },
 ];
 
-const Cards = () => {
+const ReviewList = () => {
   const renderCards = () =>
     cards.map(({ imageUrl, name, jobName, text }) => (
       <Card imageUrl={imageUrl} name={name} jobName={jobName} text={text} />
@@ -61,12 +61,15 @@ const Cards = () => {
   );
 };
 
-export default Cards;
+export default ReviewList;
 
 const Container = styled(Carousel)`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  width: 100%; // Question: on about i shouldnt add "width", but here without width theres no option to add space between the cards.****
+  margin-bottom: 56px;
+  margin-top: 56px;
+
+  // width: 100%; // Question: on about i shouldnt add "width", but here without width theres no option to add space between the cards.****
 `;

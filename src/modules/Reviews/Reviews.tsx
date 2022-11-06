@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { SectionContainer } from "../../components/General.styled";
-import ReviewsList from "./Cards/ReviewsList";
+import ReviewsList from "./ReviewList/ReviewsList";
 import Title from "./Title";
 
 const Reviews = () => {

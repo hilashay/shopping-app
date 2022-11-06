@@ -1,14 +1,7 @@
 import styled from "styled-components";
 import { CardProps } from "./ReviewsList";
 
-interface CardProps {
-  imageUrl: string;
-  name: string;
-  jobName: string;
-  text: string;
-}
-
-const Card = ({ imageUrl, name, jobName, text }: CardProps) => {
+const ReviewItem = ({ imageUrl, name, jobName, text }: CardProps) => {
   return (
     <Container>
       <Image src={imageUrl} alt="error"></Image>
@@ -21,7 +14,7 @@ const Card = ({ imageUrl, name, jobName, text }: CardProps) => {
   );
 };
 
-export default Card;
+export default ReviewItem;
 
 const Container = styled.div`
   position: relative;
@@ -32,12 +25,10 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: left;
-  
-const ReviewerInfo = styled.div`
-  margin: 56px 135px 135px 130px; // TREADE OFF: this container and the main container - both accept 135px of padding+margin left- i prefer that the first card will end at the word "Words" insted get space of 135 left and end before the title start
 `;
 
-const ContentContainer = styled.div`
+const ReviewerInfo = styled.div`
+  // margin: 56px 135px 135px 130px; // TREADE OFF: this container and the main container - both accept 135px of padding+margin left- i prefer that the first card will end at the word "Words" insted get space of 135 left and end before the title start
   margin-top: 35px;
   margin-bottom: 50px;
   margin-left: 65px;
@@ -51,7 +42,6 @@ const Image = styled.img`
   left: -30px;
   top: 20px;
 `;
-
 
 const Name = styled.p`
   color: white;

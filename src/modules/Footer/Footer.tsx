@@ -19,6 +19,7 @@ const Footer = () => {
 export default Footer;
 
 const Container = styled.div`
+  margin-top: 83px;
   display: flex;
   flex-direction: column;
 `;
