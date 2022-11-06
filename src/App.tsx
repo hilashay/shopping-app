@@ -1,6 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 import styled from "styled-components";
 import About from "./modules/About/About";
+import Footer from "./modules/Footer/Footer";
 import Header from "./modules/Header/Header";
 import Home from "./modules/Home/Home";
 import HowItWorks from "./modules/HowItWorks/HowItWorks";
@@ -15,6 +16,7 @@ function App() {
         <HowItWorks />
         <About />
         <Reviews />
+        <Footer />
       </AppContainer>
     </BrowserRouter>
   );

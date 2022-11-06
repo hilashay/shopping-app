@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Card from "./Card";
 
+
 export interface CardProps {
   imageUrl: string;
   text: string;
