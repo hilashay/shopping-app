@@ -48,11 +48,13 @@ const ReviewList = () => {
       slidesToScroll={2}
       slideIndex={0}
       defaultControlsConfig={{
+        pagingDotsClassName: "dots",
         nextButtonStyle: { display: "none" },
         prevButtonStyle: { display: "none" },
         pagingDotsStyle: {
-          fill: "#ff5300",
+          fill: "#7B7B7B",
           transform: "scale(1.5)",
+          opacity: 1,
         },
       }}
     >
@@ -64,10 +66,6 @@ const ReviewList = () => {
 export default ReviewList;
 
 const Container = styled(Carousel)`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
   margin-bottom: 56px;
   margin-top: 56px;
 

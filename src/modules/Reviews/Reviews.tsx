@@ -14,7 +14,7 @@ const Reviews = () => {
 
 export default Reviews;
 
-const Container = styled(SectionContainer)`
+const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
