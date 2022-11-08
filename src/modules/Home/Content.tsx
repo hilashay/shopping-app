@@ -28,12 +28,19 @@ const Title = styled.h1`
   margin: 23px 0 11px;
   font-size: 48px;
   width: 70%;
+  @media (max-width: 768px) {
+    font-size: 40px;
+    width: 100%;
+  }
 `;
 
 const SubTitle = styled.p`
   font-size: 16px;
   color: #7b7b7b;
   width: 400px;
+  @media (max-width: 768px) {
+    width: auto;
+  }
 `;
 
 const Button = styled.button`

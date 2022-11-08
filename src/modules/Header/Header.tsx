@@ -23,6 +23,10 @@ const Container = styled.header`
   background-color: white;
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 10%), 0 6px 20px 0 rgb(0 0 0 / 1%);
   z-index: 1;
+
+  @media (max-width: 768px) {
+    padding: 18px;
+  }
 `;
 
 const Image = styled.img`
@@ -31,4 +35,9 @@ const Image = styled.img`
   position: absolute;
   top: 10px;
   left: 135px;
+  @media (max-width: 768px) {
+    left: 40px;
+    height: 49px;
+    width: 65px;
+  }
 `;

@@ -25,6 +25,11 @@ const Container = styled(SectionContainer)`
   align-items: center;
   height: 100vh;
   background-color: #fff7f4;
+
+  @media (max-width: 768px) {
+    padding: 153px 40px 73px;
+    height: auto;
+  }
 `;
 
 const MainContainer = styled.div`
@@ -36,6 +41,8 @@ const ImageContainer = styled.div`
 `;
 
 const Image = styled.img`
-  height: 370px;
+  width: 100%;
+  max-width: 550px;
+  height: auto;
   border-radius: 30px;
 `;
