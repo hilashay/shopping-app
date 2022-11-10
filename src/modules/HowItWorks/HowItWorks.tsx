@@ -16,6 +16,9 @@ export default HowItWorks;
 const Container = styled(SectionContainer)`
   display: flex;
   flex-direction: column;
+  @media (max-width: 768px) {
+    padding: 0px 40px;
+  }
 `;
 
 const Title = styled.h1`

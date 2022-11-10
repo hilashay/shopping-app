@@ -81,6 +81,9 @@ const Step = styled.div`
   justify-content: space-between;
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  @media (max-width: 768px) {
+    width: 48%;
+  }
 `;
 
 const ImgAndNumberContainer = styled.div`
@@ -124,4 +127,7 @@ const Text = styled.p`
   width: 325px;
   color: #7b7b7b;
   font-size: 14px;
+  @media (max-width: 768px) {
+    width: 95%;
+  }
 `;
