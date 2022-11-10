@@ -20,6 +20,10 @@ const Container = styled.div`
   align-items: center;
   justify-content: space-around;
   text-align: center;
+  @media (max-width: 768px) {
+    height: 200px;
+    width: 154px;
+  }
 `;
 
 const Image = styled.img`

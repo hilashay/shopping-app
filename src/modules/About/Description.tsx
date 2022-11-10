@@ -32,6 +32,10 @@ const Container = styled.div`
   flex-direction: column;
   width: 50%;
   padding: 49px 0 93px;
+  @media (max-width: 768px) {
+    padding: 80px 0 84px;
+    margin-left: 22px;
+  }
 `;
 
 const PageLabel = styled.h6`
@@ -45,6 +49,9 @@ const Title = styled.h1`
   color: #000000;
   width: 494px;
   padding-bottom: 18px;
+  @media (max-width: 768px) {
+    width: 329px;
+  }
 `;
 
 const TextRow = styled.h2`
@@ -55,4 +62,7 @@ const Text = styled.div`
   color: gray;
   font-size: 15px;
   width: 450px;
+  @media (max-width: 768px) {
+    width: 332px;
+  }
 `;

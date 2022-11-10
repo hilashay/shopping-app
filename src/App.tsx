@@ -15,8 +15,8 @@ function App() {
         <Home />
         <HowItWorks />
         <About />
-        <Reviews />
-        <Footer />
+        {/* <Reviews />
+        <Footer /> */}
       </AppContainer>
     </BrowserRouter>
   );
