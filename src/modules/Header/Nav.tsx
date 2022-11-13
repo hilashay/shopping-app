@@ -13,22 +13,23 @@ const links: Array<{ label: LinkLabel; path: string }> = [
 export const Nav = () => {
   const [active, setActive] = useState<LinkLabel>("Home");
 
-  const renderLinks = () =>
-    links.map(({ path, label }) => (
-      <LinkContainer key={`nav-link-${label}`}>
-        <Link
-          href={path}
-          isActive={active === label}
-          onClick={() => {
-            setActive(label);
-          }}
-        >
-          {label}
-        </Link>
-      </LinkContainer>
-    ));
-
-  return <Container>{renderLinks()}</Container>;
+  return (
+    <Container>
+      {links.map(({ path, label }) => (
+        <LinkContainer key={`nav-link-${label}`}>
+          <Link
+            href={path}
+            isActive={active === label}
+            onClick={() => {
+              setActive(label);
+            }}
+          >
+            {label}
+          </Link>
+        </LinkContainer>
+      ))}
+    </Container>
+  );
 };
 
 const Container = styled.nav``;
