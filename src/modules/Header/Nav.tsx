@@ -1,10 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 type LinkLabel = "Home" | "How it works" | "About us" | "Reviews" | "Dress me";
 
 const links: Array<{ label: LinkLabel; path: string }> = [
-  { label: "Home", path: "#home-section" },
+  { label: "Home", path: "/" },
   { label: "How it works", path: "#howitworks-section" },
   { label: "About us", path: "#about-section" },
   { label: "Reviews", path: "#reviews-section" },
@@ -12,6 +13,7 @@ const links: Array<{ label: LinkLabel; path: string }> = [
 ];
 
 export const Nav = () => {
+  const navigate = useNavigate();
   const [active, setActive] = useState<LinkLabel>("Home");
 
   return (
@@ -19,10 +21,9 @@ export const Nav = () => {
       {links.map(({ path, label }) => (
         <LinkContainer key={`nav-link-${label}`}>
           <Link
-            href={path}
             isActive={active === label}
-            onClick={(event) => {
-              // event.preventDefault();
+            onClick={() => {
+              navigate(path);
               setActive(label);
             }}
           >
@@ -45,7 +46,7 @@ interface LinkProps {
   isActive: boolean;
 }
 
-const Link = styled.a<LinkProps>`
+const Link = styled.div<LinkProps>`
   font-family: "Gambetta", serif;
   text-decoration: none;
   font-size: 20px;
