@@ -38,8 +38,8 @@ const cards: CardProps[] = [
 
 const ReviewList = () => {
   const renderCards = () =>
-    cards.map(({ imageUrl, name, jobName, text }) => (
-      <Card imageUrl={imageUrl} name={name} jobName={jobName} text={text} />
+    cards.map(({ imageUrl, name, jobName, text }, index) => (
+      <Card imageUrl={imageUrl} name={name} jobName={jobName} text={text} key={index} />
     ));
 
   return (

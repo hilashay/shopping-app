@@ -47,8 +47,8 @@ const steps = [
 
 const Steps = () => {
   const renderSteps = () =>
-    steps.map(({ img, cardNumber, title, text }) => (
-      <Step>
+    steps.map(({ img, cardNumber, title, text }, index) => (
+      <Step key={index}>
         <ImgAndNumberContainer>
           <Img src={img} alt="error" />
           <NumberOfCard>{cardNumber}</NumberOfCard>
