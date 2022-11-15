@@ -1,10 +1,11 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 type LinkLabel = "Home" | "How it works" | "About us" | "Reviews" | "Dress me";
 
 const links: Array<{ label: LinkLabel; path: string }> = [
-  { label: "Home", path: "#home-section" },
+  { label: "Home", path: "/" },
   { label: "How it works", path: "#howitworks-section" },
   { label: "About us", path: "#about-section" },
   { label: "Reviews", path: "#reviews-section" },
@@ -18,16 +19,15 @@ export const Nav = () => {
     <Container>
       {links.map(({ path, label }) => (
         <LinkContainer key={`nav-link-${label}`}>
-          <Link
-            href={path}
+          <StyledLink
+            to={path}
             isActive={active === label}
-            onClick={(event) => {
-              // event.preventDefault();
+            onClick={() => {
               setActive(label);
             }}
           >
             {label}
-          </Link>
+          </StyledLink>
         </LinkContainer>
       ))}
     </Container>
@@ -45,7 +45,7 @@ interface LinkProps {
   isActive: boolean;
 }
 
-const Link = styled.a<LinkProps>`
+const StyledLink = styled(Link)<LinkProps>`
   font-family: "Gambetta", serif;
   text-decoration: none;
   font-size: 20px;
