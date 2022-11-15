@@ -1,13 +1,14 @@
 import { useState } from "react";
 import styled from "styled-components";
 
-type LinkLabel = "Home" | "How it works" | "About us" | "Reviews";
+type LinkLabel = "Home" | "How it works" | "About us" | "Reviews" | "Dress me";
 
 const links: Array<{ label: LinkLabel; path: string }> = [
   { label: "Home", path: "#home-section" },
-  { label: "How it works", path: "#form-section" },
-  { label: "About us", path: "#" },
+  { label: "How it works", path: "#howitworks-section" },
+  { label: "About us", path: "#about-section" },
   { label: "Reviews", path: "#reviews-section" },
+  { label: "Dress me", path: "/form-section" },
 ];
 
 export const Nav = () => {
@@ -20,7 +21,8 @@ export const Nav = () => {
           <Link
             href={path}
             isActive={active === label}
-            onClick={() => {
+            onClick={(event) => {
+              // event.preventDefault();
               setActive(label);
             }}
           >
