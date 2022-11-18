@@ -25,6 +25,10 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: left;
+  @media (max-width: 768px) {
+    font-size: 40px;
+    width: 292px;
+  }
 `;
 
 const ReviewerInfo = styled.div`
@@ -48,6 +52,9 @@ const Name = styled.p`
   font-size: 25px;
   margin-top: 10px;
   margin-bottom: 7px;
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
 `;
 
 const JobName = styled.p`
@@ -63,4 +70,7 @@ const Text = styled.div`
   font-size: 16px;
   margin-right: 35px;
   margin-bottom: 25px;
+  @media (max-width: 768px) {
+    width: 225px;
+  }
 `;
