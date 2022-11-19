@@ -1,36 +1,26 @@
 import styled from "styled-components";
 import { SectionContainer, Button } from "../../components/General.styled";
-import { Field, Formik, useFormik } from "formik";
+import { Field, Formik, useFormik, Form } from "formik";
 import { validate } from "./validate";
 import PersonalDetails from "./PersonalDeatails";
 import Sizes from "./Sizes";
 import TextArea from "./TextArea";
-import { render } from "react-dom";
-import Hila from "./Hila";
-import Idan from "./Idan";
-import Sefi from "./Sefi";
 
 const DressMe = () => {
   return (
     <Container id="form-section">
-      {/* <Title>Dress me!</Title> */}
-      //render-props
-      <Hila render={() => <h1>I am a render prop!</h1>} />
-      //children-prop
-      <Sefi>
-        <Idan />
-      </Sefi>
+      <Title>Dress me!</Title>
       <Formik
         initialValues={{
           email: "",
           firstName: "",
-          // lastName: "",
-          // adress: "",
-          // phone: "",
-          // budget: "",
-          // shirtSize: "",
-          // pantsSize: "",
-          // other: "",
+          lastName: "",
+          adress: "",
+          phone: "",
+          budget: "",
+          shirtSize: "",
+          pantsSize: "",
+          other: "",
         }}
         validate={validate}
         onSubmit={(values) => {
@@ -39,12 +29,12 @@ const DressMe = () => {
         }}
       >
         {(initialValues) => (
-          <Form>
+          <StyledForm>
             <PersonalDetails {...initialValues} />
-            <Sizes />
-            <TextArea />
+            {/* <Sizes />
+            <TextArea /> */}
             <FormButton type="submit">Submit</FormButton>
-          </Form>
+          </StyledForm>
         )}
       </Formik>
     </Container>
@@ -71,7 +61,7 @@ const Title = styled.h1`
   margin: 37px 0 26px;
 `;
 
-const Form = styled.form`
+const StyledForm = styled(Form)`
   display: flex;
   width: 100%;
   flex-direction: column;
