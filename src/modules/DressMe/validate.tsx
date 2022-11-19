@@ -1,5 +1,6 @@
 type DressMeForm = { email?: string; firstName?: string };
 export const validate = (values: DressMeForm) => {
+  //   debugger;
   console.log("validate");
   const errors: DressMeForm = {};
   console.log("errors object when everything's valid", errors);
@@ -9,6 +10,12 @@ export const validate = (values: DressMeForm) => {
   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
     errors.email = "Invalid email address";
     console.log(" errors.email invalid", errors);
+  }
+
+  if (!values.firstName) {
+    errors.firstName = "Required";
+  } else if (values.firstName.length < 2) {
+    errors.firstName = "at least 2 characters";
   }
 
   return errors;

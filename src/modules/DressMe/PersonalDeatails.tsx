@@ -3,11 +3,9 @@ import styled from "styled-components";
 import { useEffect } from "react";
 
 const PersonalDetails = ({ ...props }) => {
-  console.log("props", props);
-  const [field, meta, helpers] = useField("email");
-  console.log("field ", field.value);
-  console.log("meta ", meta);
-  console.log("helpers ", helpers);
+  const [field, meta] = useField("email");
+  const [firsNameField, firsNameMeta] = useField("firstName");
+
   //   useEffect(() => {
   //     if (field.value.includes("@")) {
   //       helpers.setValue("asdasdada");
@@ -20,19 +18,19 @@ const PersonalDetails = ({ ...props }) => {
       <SecondaryContainer>
         <FieldContainer>
           <PersonalField placeholder="First Name" name="firstName" />
-          {meta.error ? <Invalid>{meta.error}</Invalid> : null}
+          {firsNameMeta.error ? <Invalid>{firsNameMeta.error}</Invalid> : null}
         </FieldContainer>
-        <FieldContainer>
-          <PersonalField placeholder="Last Name" name="lastName" />
-          {meta.error ? <Invalid>{meta.error}</Invalid> : null}
-        </FieldContainer>
+        {/* <FieldContainer>
+            <PersonalField placeholder="Last Name" name="lastName" />
+            {meta.error ? <Invalid>{meta.error}</Invalid> : null}
+            </FieldContainer> */}
       </SecondaryContainer>
       <SecondaryContainer>
         <FieldContainer>
           <PersonalField placeholder="Email" name="email" />
           {meta.error ? <Invalid>{meta.error}</Invalid> : null}
         </FieldContainer>
-        <FieldContainer>
+        {/* <FieldContainer>
           <PersonalField placeholder="Adress" name="adress" />
           {meta.error ? <Invalid>{meta.error}</Invalid> : null}
         </FieldContainer>
@@ -45,7 +43,7 @@ const PersonalDetails = ({ ...props }) => {
         <FieldContainer>
           <PersonalField type="select" placeholder="budget" name="select" />
           {meta.error ? <Invalid>{meta.error}</Invalid> : null}
-        </FieldContainer>
+        </FieldContainer> */}
       </SecondaryContainer>
     </Container>
   );
