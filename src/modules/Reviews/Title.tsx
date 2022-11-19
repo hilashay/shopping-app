@@ -16,7 +16,7 @@ const Title = () => {
 
 export default Title;
 
-const Container = styled.h2`
+const Container = styled.div`
   width: 460px;
 `;
 
