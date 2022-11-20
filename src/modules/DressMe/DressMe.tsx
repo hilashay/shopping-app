@@ -28,14 +28,16 @@ const DressMe = () => {
           alert(JSON.stringify(values));
         }}
       >
-        {(initialValues) => (
-          <StyledForm>
-            <PersonalDetails {...initialValues} />
-            {/* <Sizes />
+        {(formik) => {
+          return (
+            <StyledForm>
+              <PersonalDetails />
+              {/* <Sizes />
             <TextArea /> */}
-            <FormButton type="submit">Submit</FormButton>
-          </StyledForm>
-        )}
+              <FormButton type="submit">Submit</FormButton>
+            </StyledForm>
+          );
+        }}
       </Formik>
     </Container>
   );
