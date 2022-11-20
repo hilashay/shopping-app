@@ -1,10 +1,10 @@
+import { Form, Formik } from "formik";
 import styled from "styled-components";
-import { SectionContainer, Button } from "../../components/General.styled";
-import { Field, Formik, useFormik, Form } from "formik";
-import { validate } from "./validate";
-import PersonalDetails from "./PersonalDeatails";
+import { Button, SectionContainer } from "../../components/General.styled";
+import PersonalDetails from "./PersonalDeatails/PersonalDeatails";
 import Sizes from "./Sizes";
 import TextArea from "./TextArea";
+import { validate } from "./validate";
 
 const DressMe = () => {
   return (
@@ -32,8 +32,8 @@ const DressMe = () => {
           return (
             <StyledForm>
               <PersonalDetails />
-              {/* <Sizes />
-            <TextArea /> */}
+              <Sizes />
+              <TextArea />
               <FormButton type="submit">Submit</FormButton>
             </StyledForm>
           );
@@ -47,7 +47,6 @@ export default DressMe;
 
 const Container = styled(SectionContainer)`
   display: flex;
-  position: relative;
   padding-top: 100px;
   min-height: 100vh;
   background: #e5e5e5;
@@ -68,6 +67,7 @@ const StyledForm = styled(Form)`
   width: 100%;
   flex-direction: column;
   align-items: center;
+  position: relative;
 `;
 
 const FormButton = styled(Button)`
@@ -76,6 +76,6 @@ const FormButton = styled(Button)`
   width: 150px;
   font-size: 15px;
   position: absolute;
-  bottom: 386px;
-  right: 616px;
+  bottom: 0;
+  left: 0;
 `;
