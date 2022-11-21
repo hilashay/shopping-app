@@ -1,7 +1,16 @@
 import styled from "styled-components";
 import FieldAndValidation from "./FieldAndValidation";
-
+// @ts-ignore
 const PersonalDetails = () => {
+  const rangeProps = {
+    type: "number",
+    min: "300",
+    max: "10000",
+    placeholder: "Budget",
+    name: "budget",
+    step: "100",
+  };
+
   return (
     <Container>
       <SecondaryContainer>
@@ -14,14 +23,7 @@ const PersonalDetails = () => {
       </SecondaryContainer>
       <SecondaryContainer>
         <FieldAndValidation placeholder="Phone" name="phone" />
-        <FieldAndValidation
-          type="number"
-          min="300"
-          max="10000"
-          placeholder="Budget"
-          name="budget"
-          step="100"
-        />
+        <FieldAndValidation {...rangeProps} />
       </SecondaryContainer>
     </Container>
   );

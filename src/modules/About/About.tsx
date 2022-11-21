@@ -6,7 +6,7 @@ import Description from "./Description";
 const About = () => {
   return (
     <Container id="about-section">
-      <TopContainer>
+      <RowContainer>
         <ImageContainer>
           <Image
             src="https://i.pinimg.com/564x/e5/fa/b3/e5fab38a3300f8cd38e7a13443b09212.jpg"
@@ -14,7 +14,7 @@ const About = () => {
           />
         </ImageContainer>
         <Description />
-      </TopContainer>
+      </RowContainer>
       <Cards />
     </Container>
   );
@@ -33,7 +33,7 @@ const Container = styled(SectionContainer)`
   }
 `;
 
-const TopContainer = styled.div`
+const RowContainer = styled.div`
   display: flex;
   flex-direction: row;
 `;

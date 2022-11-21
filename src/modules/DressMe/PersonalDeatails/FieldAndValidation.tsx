@@ -1,6 +1,6 @@
 import { Field, useField } from "formik";
 import styled from "styled-components";
-
+// @ts-ignore
 export interface FieldProps {
   placeholder: string;
   name: string;
@@ -10,19 +10,14 @@ export interface FieldProps {
   step?: string;
 }
 
-const FieldAndValidation = ({ min, max, step, type, placeholder, name }: FieldProps) => {
-  const [Field, Meta] = useField(name);
+const FieldAndValidation = (props: FieldProps) => {
+  const { name, ...other } = props;
+
+  const [field, meta] = useField(name);
   return (
     <FieldContainer>
-      <PersonalField
-        min={min}
-        max={max}
-        step={step}
-        type={type}
-        placeholder={placeholder}
-        name={name}
-      />
-      {Meta.error ? <Invalid>{Meta.error}</Invalid> : null}
+      <PersonalField {...props} />
+      {meta.error ? <Invalid>{meta.error}</Invalid> : null}
     </FieldContainer>
   );
 };
