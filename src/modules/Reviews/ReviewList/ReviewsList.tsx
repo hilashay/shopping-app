@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Card from "./ReviewItem";
+import ReviewItem from "./ReviewItem";
 import Carousel from "nuka-carousel";
 
 export interface CardProps {
@@ -39,7 +39,7 @@ const cards: CardProps[] = [
 const ReviewList = () => {
   const renderCards = () =>
     cards.map(({ imageUrl, name, jobName, text }, index) => (
-      <Card imageUrl={imageUrl} name={name} jobName={jobName} text={text} key={index} />
+      <ReviewItem imageUrl={imageUrl} name={name} jobName={jobName} text={text} key={index} />
     ));
 
   return (
