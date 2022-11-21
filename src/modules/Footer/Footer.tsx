@@ -28,4 +28,7 @@ const TopContainer = styled(SectionContainer)`
   flex-direction: row;
   background: #373737;
   padding-top: 66px;
+  @media (max-width: 768px) {
+    padding: 60px 0 10px 40px;
+  }
 `;

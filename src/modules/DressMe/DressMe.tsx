@@ -1,4 +1,5 @@
 import { Form, Formik } from "formik";
+import { useEffect } from "react";
 import styled from "styled-components";
 import { Button, SectionContainer } from "../../components/General.styled";
 import PersonalDetails from "./PersonalDeatails/PersonalDeatails";
@@ -7,6 +8,9 @@ import TextArea from "./TextArea";
 import { validate } from "./validate";
 
 const DressMe = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Container id="form-section">
       <Title>Dress me!</Title>
@@ -30,12 +34,14 @@ const DressMe = () => {
       >
         {(formik) => {
           return (
-            <StyledForm>
-              <PersonalDetails />
-              <Sizes />
-              <TextArea />
-              <FormButton type="submit">Submit</FormButton>
-            </StyledForm>
+            <FormContainer>
+              <StyledForm>
+                <PersonalDetails />
+                <Sizes />
+                <TextArea />
+                <FormButton type="submit">Submit</FormButton>
+              </StyledForm>
+            </FormContainer>
           );
         }}
       </Formik>
@@ -47,13 +53,19 @@ export default DressMe;
 
 const Container = styled(SectionContainer)`
   display: flex;
-  padding-top: 100px;
-  min-height: 100vh;
+  padding: 100px 0 100px;
   background: #e5e5e5;
   flex-direction: column;
+  align-items: center;
+  margin-bottom: -83px;
   @media (max-width: 768px) {
     padding: 0px 40px;
   }
+`;
+
+const FormContainer = styled.div`
+  diaplay: flex;
+  justify-content: center;
 `;
 
 const Title = styled.h1`
@@ -75,7 +87,5 @@ const FormButton = styled(Button)`
   height: 40px;
   width: 150px;
   font-size: 15px;
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  align-self: end;
 `;
