@@ -1,29 +1,21 @@
 import styled from "styled-components";
-import FieldAndValidation from "./FieldAndValidation";
-// @ts-ignore
-const PersonalDetails = () => {
-  const rangeProps = {
-    type: "number",
-    min: "300",
-    max: "10000",
-    placeholder: "Budget",
-    name: "budget",
-    step: "100",
-  };
+import FieldWithValidation from "./FieldWithValidation";
+import { rangeProps } from "./rangeProps";
 
+const PersonalDetails = () => {
   return (
     <Container>
       <SecondaryContainer>
-        <FieldAndValidation placeholder="First Name" name="firstName" />
-        <FieldAndValidation placeholder="Last Name" name="lastName" />
+        <FieldWithValidation placeholder="First Name" name="firstName" />
+        <FieldWithValidation placeholder="Last Name" name="lastName" />
       </SecondaryContainer>
       <SecondaryContainer>
-        <FieldAndValidation placeholder="Email" name="email" />
-        <FieldAndValidation placeholder="Adress" name="adress" />
+        <FieldWithValidation placeholder="Email" name="email" />
+        <FieldWithValidation placeholder="Adress" name="adress" />
       </SecondaryContainer>
       <SecondaryContainer>
-        <FieldAndValidation placeholder="Phone" name="phone" />
-        <FieldAndValidation {...rangeProps} />
+        <FieldWithValidation placeholder="Phone" name="phone" />
+        <FieldWithValidation {...rangeProps} />
       </SecondaryContainer>
     </Container>
   );

@@ -10,8 +10,8 @@ export interface FieldProps {
   step?: string;
 }
 
-const FieldAndValidation = (props: FieldProps) => {
-  const { name, ...other } = props;
+const FieldWithValidation = (props: FieldProps) => {
+  const { name } = props;
 
   const [field, meta] = useField(name);
   return (
@@ -22,7 +22,7 @@ const FieldAndValidation = (props: FieldProps) => {
   );
 };
 
-export default FieldAndValidation;
+export default FieldWithValidation;
 
 const FieldContainer = styled.div`
   display: flex;

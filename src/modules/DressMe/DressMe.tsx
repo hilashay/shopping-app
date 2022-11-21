@@ -2,8 +2,9 @@ import { Form, Formik } from "formik";
 import { useEffect } from "react";
 import styled from "styled-components";
 import { Button, SectionContainer } from "../../components/General.styled";
+import { initialValues } from "./initialValues";
 import PersonalDetails from "./PersonalDeatails/PersonalDeatails";
-import Sizes from "./Sizes";
+import Sizes from "./UserSizeSelection";
 import TextArea from "./TextArea";
 import { validate } from "./validate";
 
@@ -15,17 +16,7 @@ const DressMe = () => {
     <Container id="form-section">
       <Title>Dress me!</Title>
       <Formik
-        initialValues={{
-          email: "",
-          firstName: "",
-          lastName: "",
-          adress: "",
-          phone: "",
-          budget: "",
-          shirtSize: "",
-          pantsSize: "",
-          other: "",
-        }}
+        initialValues={initialValues}
         validate={validate}
         onSubmit={(values) => {
           console.log("onSubmit");

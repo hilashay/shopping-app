@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import { Field, Formik, useFormik } from "formik";
-import { validate } from "./validate";
 
 const TextArea = () => {
   return (

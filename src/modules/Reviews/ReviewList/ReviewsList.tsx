@@ -37,11 +37,6 @@ const cards: CardProps[] = [
 ];
 
 const ReviewList = () => {
-  const renderCards = () =>
-    cards.map(({ imageUrl, name, jobName, text }, index) => (
-      <ReviewItem imageUrl={imageUrl} name={name} jobName={jobName} text={text} key={index} />
-    ));
-
   return (
     <Container
       slidesToShow={2}
@@ -58,7 +53,9 @@ const ReviewList = () => {
         },
       }}
     >
-      {renderCards()}
+      {cards.map(({ imageUrl, name, jobName, text }, index) => (
+        <ReviewItem imageUrl={imageUrl} name={name} jobName={jobName} text={text} key={index} />
+      ))}
     </Container>
   );
 };
