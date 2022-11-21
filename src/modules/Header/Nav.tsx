@@ -1,15 +1,15 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { NavHashLink } from "react-router-hash-link";
 
 type LinkLabel = "Home" | "How it works" | "About us" | "Reviews" | "Dress me";
 
 const links: Array<{ label: LinkLabel; path: string }> = [
-  { label: "Home", path: "/" },
+  { label: "Home", path: "#hero-section" },
   { label: "How it works", path: "#howitworks-section" },
   { label: "About us", path: "#about-section" },
   { label: "Reviews", path: "#reviews-section" },
-  { label: "Dress me", path: "/form-section" },
+  { label: "Dress me", path: "form-section" },
 ];
 
 export const Nav = () => {
@@ -20,9 +20,10 @@ export const Nav = () => {
       {links.map(({ path, label }) => (
         <LinkContainer key={`nav-link-${label}`}>
           <StyledLink
-            to={path}
+            to={`/${path}`}
             isActive={active === label}
             onClick={() => {
+              console.log("label", label);
               setActive(label);
             }}
           >
@@ -45,7 +46,7 @@ interface LinkProps {
   isActive: boolean;
 }
 
-const StyledLink = styled(Link)<LinkProps>`
+const StyledLink = styled(NavHashLink)<LinkProps>`
   font-family: "Gambetta", serif;
   text-decoration: none;
   font-size: 20px;
