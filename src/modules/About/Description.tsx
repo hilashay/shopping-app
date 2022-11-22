@@ -43,15 +43,6 @@ const PageLabel = styled.p`
   width: 400px;
 `;
 
-const Title = styled.h1`
-  color: #000000;
-  width: 494px;
-  padding-bottom: 18px;
-  @media (max-width: 768px) {
-    width: 329px;
-  }
-`;
-
 const TextRow = styled.div`
   font-size: 40px;
 `;

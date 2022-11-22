@@ -9,6 +9,20 @@ type DressMeForm = {
   pantsSize?: string;
   other?: string;
 };
+
+const validateRequiredWithMinLength = (
+  fieldName: string,
+  values: any,
+  errors: any,
+  minLength: number
+) => {
+  if (!values[fieldName]) {
+    errors[fieldName] = "Required";
+  } else if (values.fieldName.length < minLength) {
+    errors[fieldName] = `At least ${minLength} characters`;
+  }
+};
+
 export const validate = (values: DressMeForm) => {
   //   debugger;
   console.log("validate");
@@ -16,29 +30,16 @@ export const validate = (values: DressMeForm) => {
   console.log("errors object when everything's valid", errors);
   if (!values.email) {
     errors.email = "Required";
+    errors["email"] = "Required";
     console.log(" errors.email no email", errors);
   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
     errors.email = "Invalid email address";
     console.log(" errors.email invalid", errors);
   }
 
-  if (!values.firstName) {
-    errors.firstName = "Required";
-  } else if (values.firstName.length < 2) {
-    errors.firstName = "At least 2 characters";
-  }
-
-  if (!values.lastName) {
-    errors.lastName = "Required";
-  } else if (values.lastName.length < 2) {
-    errors.lastName = "At least 2 characters";
-  }
-
-  if (!values.adress) {
-    errors.adress = "Required";
-  } else if (values.adress.length < 4) {
-    errors.adress = "At least 4 characters";
-  }
+  validateRequiredWithMinLength("firstName", values, errors, 2);
+  validateRequiredWithMinLength("lastName", values, errors, 2);
+  validateRequiredWithMinLength("adress", values, errors, 4);
 
   if (!values.phone) {
     errors.phone = "Required";
