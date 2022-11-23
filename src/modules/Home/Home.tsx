@@ -4,7 +4,7 @@ import { SectionContainer } from "../../components/General.styled";
 
 const Home = () => {
   return (
-    <Container id="home-section">
+    <Container id="/">
       <MainContainer>
         <Content />
         <ImageContainer>
