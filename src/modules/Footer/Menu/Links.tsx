@@ -15,8 +15,9 @@ const Menu = () => {
   const [active, setActive] = useState("");
 
   const renderLinks = () =>
-    links.map(({ label, path }) => (
+    links.map(({ label, path }, index) => (
       <Link
+        key={index}
         href={path}
         isActive={active === label}
         onClick={() => {
