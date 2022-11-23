@@ -1,34 +1,34 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import { NavHashLink } from "react-router-hash-link";
 
 type LinkLabel = "Home" | "How it works" | "About us" | "Reviews" | "Dress me";
 
 const links: Array<{ label: LinkLabel; path: string }> = [
-  { label: "Home", path: "/" },
+  { label: "Home", path: "#hero-section" },
   { label: "How it works", path: "#howitworks-section" },
   { label: "About us", path: "#about-section" },
   { label: "Reviews", path: "#reviews-section" },
-  { label: "Dress me", path: "/form-section" },
+  { label: "Dress me", path: "form-section" },
 ];
 
 export const Nav = () => {
-  const navigate = useNavigate();
   const [active, setActive] = useState<LinkLabel>("Home");
 
   return (
     <Container>
       {links.map(({ path, label }) => (
         <LinkContainer key={`nav-link-${label}`}>
-          <Link
+          <StyledLink
+            to={`/${path}`}
             isActive={active === label}
             onClick={() => {
-              navigate(path);
+              console.log("label", label);
               setActive(label);
             }}
           >
             {label}
-          </Link>
+          </StyledLink>
         </LinkContainer>
       ))}
     </Container>
@@ -46,7 +46,7 @@ interface LinkProps {
   isActive: boolean;
 }
 
-const Link = styled.div<LinkProps>`
+const StyledLink = styled(NavHashLink)<LinkProps>`
   font-family: "Gambetta", serif;
   text-decoration: none;
   font-size: 20px;

@@ -6,7 +6,7 @@ import Reviews from "./Reviews/Reviews";
 
 function HomePage() {
   return (
-    <AppContainer>
+    <AppContainer id="hero-section">
       <Home />
       <HowItWorks />
       <About />

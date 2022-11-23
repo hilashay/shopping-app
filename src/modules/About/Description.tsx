@@ -5,14 +5,12 @@ const Description = () => {
   return (
     <Container>
       <PageLabel>About us</PageLabel>
-      <Title>
-        <TextRow>
-          We Are <Span>Making</Span>
-        </TextRow>
-        <TextRow>
-          <Span>Ideas Better</Span> For Everyone
-        </TextRow>
-      </Title>
+      <TextRow>
+        We Are <Span>Making</Span>
+      </TextRow>
+      <TextRow>
+        <Span>Ideas Better</Span> For Everyone
+      </TextRow>
       <Text>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nascetur imperdiet at a augue
         ullamcorper. Leo faucibus feugiat rutrum aenean. Nisi, lectus aliquet aliquam consectetur
@@ -38,23 +36,14 @@ const Container = styled.div`
   }
 `;
 
-const PageLabel = styled.h6`
+const PageLabel = styled.p`
   color: gray;
   font-size: 15px;
   margin-bottom: 10px;
   width: 400px;
 `;
 
-const Title = styled.h1`
-  color: #000000;
-  width: 494px;
-  padding-bottom: 18px;
-  @media (max-width: 768px) {
-    width: 329px;
-  }
-`;
-
-const TextRow = styled.h2`
+const TextRow = styled.div`
   font-size: 40px;
 `;
 
