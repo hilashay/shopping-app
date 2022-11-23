@@ -20,7 +20,8 @@ const icons: Array<{ ImageUrl: string; alt: string }> = [
 ];
 
 const Icons = () => {
-  const renderIcons = () => icons.map(({ ImageUrl, alt }) => <Image src={ImageUrl} alt={alt} />);
+  const renderIcons = () =>
+    icons.map(({ ImageUrl, alt }, index) => <Image key={index} src={ImageUrl} alt={alt} />);
   return <Container>{renderIcons()}</Container>;
 };
 

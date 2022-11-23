@@ -5,7 +5,7 @@ import Title from "./Title";
 
 const Reviews = () => {
   return (
-    <Container>
+    <Container id="reviews-section">
       <Title />
       <ReviewsList />
     </Container>

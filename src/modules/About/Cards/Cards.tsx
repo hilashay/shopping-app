@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import Card from "./Card";
 
-
 export interface CardProps {
   imageUrl: string;
   text: string;
@@ -28,7 +27,7 @@ const cards: CardProps[] = [
 
 const Cards = () => {
   const renderCards = () =>
-    cards.map(({ imageUrl, text }) => <Card imageUrl={imageUrl} text={text} />);
+    cards.map(({ imageUrl, text }, index) => <Card imageUrl={imageUrl} text={text} key={index} />);
 
   return <Container>{renderCards()}</Container>;
 };

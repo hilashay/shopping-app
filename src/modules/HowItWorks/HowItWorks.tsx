@@ -4,7 +4,7 @@ import Steps from "./Steps";
 
 const HowItWorks = () => {
   return (
-    <Container id="form-section">
+    <Container id="howitworks-section">
       <Title>How it works?</Title>
       <Steps />
     </Container>
