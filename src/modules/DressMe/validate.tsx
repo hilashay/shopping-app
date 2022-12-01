@@ -18,7 +18,7 @@ const validateRequiredWithMinLength = (
 ) => {
   if (!values[fieldName]) {
     errors[fieldName] = "Required";
-  } else if (values.fieldName.length < minLength) {
+  } else if (values[fieldName].length < minLength) {
     errors[fieldName] = `At least ${minLength} characters`;
   }
 };
@@ -45,8 +45,9 @@ export const validate = (values: DressMeForm) => {
     errors.phone = "Required";
   } else if (values.phone.length < 10) {
     errors.phone = "At least 10 characters";
-  } else if (typeof values.phone !== "number") {
-    errors.phone = "Not valid, try again";
+    // } else if (typeof values.phone !== "number") {
+    //   console.log("values.phone", typeof values.phone);
+    //   errors.phone = "Not valid, try again";
   }
 
   if (!values.budget) {

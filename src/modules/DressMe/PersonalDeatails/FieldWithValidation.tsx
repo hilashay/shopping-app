@@ -1,6 +1,6 @@
 import { Field, useField } from "formik";
 import styled from "styled-components";
-// @ts-ignore
+
 export interface FieldProps {
   placeholder: string;
   name: string;

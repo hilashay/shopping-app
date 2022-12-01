@@ -7,19 +7,27 @@ import PersonalDetails from "./PersonalDeatails/PersonalDeatails";
 import Sizes from "./UserSizeSelection";
 import TextArea from "./TextArea";
 import { validate } from "./validate";
+import { NavHashLink } from "react-router-hash-link";
+import { useNavigate } from "react-router-dom";
+import React from "react";
 
+export const MyContext = React.createContext("");
 const DressMe = () => {
+  const navigate = useNavigate();
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
     <Container id="form-section">
-      <Title>Dress me!</Title>
+      <Title>Dress me</Title>
       <Formik
         initialValues={initialValues}
         validate={validate}
         onSubmit={(values) => {
+          navigate("/success-section");
           console.log("onSubmit");
+          console.log("initialValues", initialValues);
           alert(JSON.stringify(values));
         }}
       >
@@ -49,6 +57,7 @@ const Container = styled(SectionContainer)`
   flex-direction: column;
   align-items: center;
   margin-bottom: -83px;
+  min-height: 100vh;
   @media (max-width: 768px) {
     padding: 0px 40px;
   }
