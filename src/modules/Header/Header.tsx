@@ -23,7 +23,6 @@ const Container = styled.header`
   background-color: white;
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 10%), 0 6px 20px 0 rgb(0 0 0 / 1%);
   z-index: 1;
-
   @media (max-width: 768px) {
     padding: 18px;
   }

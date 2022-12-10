@@ -25,6 +25,7 @@ export default PersonalDetails;
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  // background: red;
 `;
 
 const SecondaryContainer = styled.div`

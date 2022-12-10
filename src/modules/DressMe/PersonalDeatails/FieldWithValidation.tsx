@@ -12,8 +12,8 @@ export interface FieldProps {
 
 const FieldWithValidation = (props: FieldProps) => {
   const { name } = props;
-
   const [field, meta] = useField(name);
+
   return (
     <FieldContainer>
       <PersonalField {...props} />

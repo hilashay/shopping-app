@@ -1,5 +1,5 @@
-import { Form, Formik } from "formik";
-import { useEffect } from "react";
+import { Form, Formik, useFormik } from "formik";
+import { useContext, useEffect } from "react";
 import styled from "styled-components";
 import { Button, SectionContainer } from "../../components/General.styled";
 import { initialValues } from "./initialValues";
@@ -10,10 +10,11 @@ import { validate } from "./validate";
 import { NavHashLink } from "react-router-hash-link";
 import { useNavigate } from "react-router-dom";
 import React from "react";
+import { useFormDetails } from "../../providers/FormValuesContext";
 
-export const MyContext = React.createContext("");
 const DressMe = () => {
   const navigate = useNavigate();
+  const formDetails = useFormDetails();
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -23,21 +24,23 @@ const DressMe = () => {
       <Title>Dress me</Title>
       <Formik
         initialValues={initialValues}
-        validate={validate}
+        // validate={validate}
+        enableReinitialize={true}
         onSubmit={(values) => {
-          navigate("/success-section");
-          console.log("onSubmit");
-          console.log("initialValues", initialValues);
+          formDetails.setFormValues(values);
           alert(JSON.stringify(values));
+          navigate("/success-section");
         }}
       >
         {(formik) => {
+          console.log("formik", formik.values);
+
           return (
             <FormContainer>
               <StyledForm>
                 <PersonalDetails />
                 <Sizes />
-                <TextArea />
+                {/* <TextArea /> */}
                 <FormButton type="submit">Submit</FormButton>
               </StyledForm>
             </FormContainer>

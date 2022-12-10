@@ -1,20 +1,28 @@
 import styled from "styled-components";
 import { pantsSizes, shirtSizes } from "./sizeOptions";
+import { Field, useField } from "formik";
 
 const UserSizeSelection = () => {
   const createOptionElement = ({ value, label }: any) => <option value={value} label={label} />;
+  const [value, meta, shirtSizeHelpers] = useField("shirtSize");
+  const [value2, meta2, pantsSizeHelpers] = useField("pantsSize");
+
   return (
     <Container>
-      <Select name="shirtsize">
-        <option value="" label="Pick your shirt size">
-          Select a color
-        </option>
+      <Select
+        // name="shirtSize"
+        onChange={(e: any) => {
+          shirtSizeHelpers.setValue(e.target.value);
+        }}
+      >
         {shirtSizes.map(createOptionElement)}
       </Select>
-      <Select name="pantssize">
-        <option value="" label="Pick your Pants size">
-          Select a color
-        </option>
+      <Select
+        // name="pantsSize"
+        onChange={(e: any) => {
+          pantsSizeHelpers.setValue(e.target.value);
+        }}
+      >
         {pantsSizes.map(createOptionElement)}
       </Select>
     </Container>
@@ -39,3 +47,7 @@ const Select = styled.select`
   border-color: white;
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 10%), 0 6px 20px 0 rgb(0 0 0 / 1%);
 `;
+
+function setFieldValue(arg0: string, value: any): void {
+  throw new Error("Function not implemented.");
+}
