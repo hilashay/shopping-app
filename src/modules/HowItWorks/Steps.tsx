@@ -8,39 +8,21 @@ import styled from "styled-components";
 
 const steps = [
   {
-    img: step1,
+    img: "https://d3n78nkjl8tizo.cloudfront.net/stitch-fix/image/upload/q_auto:best/dpr_2.0/landing-pages/pages/US/gateway/Q3HowItWorks/hiw-style-preferences.svg",
     cardNumber: "01",
-    title: "Send me your details",
+    title: "Tell us about your style",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.Ex esse commodi,modi perspiciatis voluptatum nemo ipsum qui tempora assumenda nulla adipisci cumque libero? Dicta odit incidunt voluptas eos optio. Reiciendis?",
   },
   {
-    img: step2,
+    img: "https://d3n78nkjl8tizo.cloudfront.net/stitch-fix/image/upload/q_auto:best/dpr_2.0/landing-pages/pages/US/gateway/Q3HowItWorks/hiw-stylist-selections.svg",
     cardNumber: "02",
-    title: "Send me your details",
+    title: "I'll pick pieces just for you",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.Ex esse commodi,modi perspiciatis voluptatum nemo ipsum qui tempora assumenda nulla adipisci cumque libero? Dicta odit incidunt voluptas eos optio. Reiciendis?",
   },
   {
-    img: step3,
+    img: "https://d3n78nkjl8tizo.cloudfront.net/stitch-fix/image/upload/q_auto:best/dpr_2.0/landing-pages/pages/US/gateway/Q3HowItWorks/hiw-personalized-shops.svg  ",
     cardNumber: "03",
-    title: "Send me your details",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.Ex esse commodi,modi perspiciatis voluptatum nemo ipsum qui tempora assumenda nulla adipisci cumque libero? Dicta odit incidunt voluptas eos optio. Reiciendis?",
-  },
-  {
-    img: step4,
-    cardNumber: "04",
-    title: "Send me your details",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.Ex esse commodi,modi perspiciatis voluptatum nemo ipsum qui tempora assumenda nulla adipisci cumque libero? Dicta odit incidunt voluptas eos optio. Reiciendis?",
-  },
-  {
-    img: step5,
-    cardNumber: "05",
-    title: "Send me your details",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.Ex esse commodi,modi perspiciatis voluptatum nemo ipsum qui tempora assumenda nulla adipisci cumque libero? Dicta odit incidunt voluptas eos optio. Reiciendis?",
-  },
-  {
-    img: step6,
-    cardNumber: "06",
-    title: "Send me your details",
+    title: "Clothing just show up at your house.",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.Ex esse commodi,modi perspiciatis voluptatum nemo ipsum qui tempora assumenda nulla adipisci cumque libero? Dicta odit incidunt voluptas eos optio. Reiciendis?",
   },
 ];
@@ -49,10 +31,7 @@ const Steps = () => {
   const renderSteps = () =>
     steps.map(({ img, cardNumber, title, text }, index) => (
       <Step key={index}>
-        <ImgAndNumberContainer>
-          <Img src={img} alt="error" />
-          <NumberOfCard>{cardNumber}</NumberOfCard>
-        </ImgAndNumberContainer>
+        <Img src={img} alt="error" />
         <TextContainer>
           <Title>{title}</Title>
           <Text>{text}</Text>
@@ -79,40 +58,25 @@ const Step = styled.div`
   margin-bottom: 30px;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+  align-items: center;
   border-radius: 10px;
   @media (max-width: 768px) {
     width: 48%;
   }
 `;
 
-const ImgAndNumberContainer = styled.div`
-  margin-top: 30px;
-  margin-left: 25px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-`;
-
-const NumberOfCard = styled.p`
-  margin-right: 20px;
-  height: 74px;
-  width: 79px;
-  color: #efefef;
-  font-size: 56px;
-`;
-
 const TextContainer = styled.div`
   margin-top: 30px;
   margin-left: 25px;
   display: flex;
+  align-items: center;
   flex-direction: column;
   margin-bottom: 200px;
 `;
 
 const Img = styled.img`
-  height: 74px;
-  width: 79px;
+  height: 200px;
+  width: auto;
 `;
 
 const Title = styled.div`

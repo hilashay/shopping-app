@@ -5,7 +5,7 @@ import Steps from "./Steps";
 const HowItWorks = () => {
   return (
     <Container id="howitworks-section">
-      <Title>How it works?</Title>
+      <Title>איך זה עובד?</Title>
       <Steps />
     </Container>
   );
@@ -16,6 +16,9 @@ export default HowItWorks;
 const Container = styled(SectionContainer)`
   display: flex;
   flex-direction: column;
+  background: #f5f5f5;
+  padding-top: 100px;
+  padding-bottom: 120px;
   @media (max-width: 768px) {
     padding: 0px 40px;
   }
