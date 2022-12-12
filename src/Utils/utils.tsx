@@ -1,6 +1,8 @@
-export const formatKey = (key: any) => {
+export const formatKeyAndValue = (key: any) => {
   console.log("key.length", key);
-  if (key.length > 2) {
-    return key?.charAt(0).toUpperCase() + key?.slice(1).replace(/[A-Z]/g, " $&").trim();
+  if (typeof key === "number") {
+    key.toString();
+    return key;
   }
+  return key?.charAt(0).toUpperCase() + key?.slice(1).replace(/[A-Z]/g, " $&").trim();
 };
