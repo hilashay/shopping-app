@@ -47,13 +47,12 @@ interface LinkProps {
 }
 
 const StyledLink = styled(NavHashLink)<LinkProps>`
-  font-family: "Gambetta", serif;
   text-decoration: none;
   font-size: 20px;
   margin-right: 16px;
-  color: ${(props) => (props.isActive ? "#ff5300" : "#000000")};
+  color: ${(props) => (props.isActive ? "#447c99" : "#000000")};
 
   :hover {
-    color: #ff5300;
+    color: #447c99;
   }
 `;

@@ -24,7 +24,6 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 263px;
-  color: #fff7f4;
   padding-right: 37px;
   padding-bottom: 60px;
 `;

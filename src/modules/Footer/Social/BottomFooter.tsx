@@ -14,7 +14,7 @@ export default BottomFooter;
 const Container = styled(SectionContainer)`
   display: flex;
   flex-direction: row;
-  background: #ff5300;
+  background: #2b282f;
   padding-top: 18px;
   padding-bottom: 18px;
   color: #ffffff;

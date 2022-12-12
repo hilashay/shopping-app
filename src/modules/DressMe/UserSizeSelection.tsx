@@ -10,7 +10,6 @@ const UserSizeSelection = () => {
   return (
     <Container>
       <Select
-        // name="shirtSize"
         onChange={(e: any) => {
           shirtSizeHelpers.setValue(e.target.value);
         }}
@@ -18,7 +17,6 @@ const UserSizeSelection = () => {
         {shirtSizes.map(createOptionElement)}
       </Select>
       <Select
-        // name="pantsSize"
         onChange={(e: any) => {
           pantsSizeHelpers.setValue(e.target.value);
         }}

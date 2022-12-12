@@ -1,17 +1,13 @@
 import styled from "styled-components";
-import { Span } from "../../components/General.styled";
+import { Span, Button } from "../../components/General.styled";
 
 const Content = () => {
   return (
     <Container>
       <Title>
-        We Are The Best <Span>Digital Agency</Span> for business
+        Discovering styles <Span>you love</Span> just got easier
       </Title>
-      <SubTitle>
-        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
-        consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-      </SubTitle>
-      <Button>Contact Us</Button>
+      <Button>Contact me</Button>
     </Container>
   );
 };
@@ -21,37 +17,21 @@ export default Content;
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  width: 50%;
+  position: rtelative;
+  align-items: center;
+  width: 100%;
 `;
 
 const Title = styled.h1`
   margin: 23px 0 11px;
-  font-size: 48px;
-  width: 70%;
+  font-size: 42px;
+  position: absolute;
+  bottom: 350px;
+  text-shadow: 2px 2px 2px gray;
+  color: white;
+  // width: 70%;
   @media (max-width: 768px) {
     font-size: 40px;
     width: 100%;
   }
-`;
-
-const SubTitle = styled.p`
-  font-size: 16px;
-  color: #7b7b7b;
-  width: 400px;
-  @media (max-width: 768px) {
-    width: auto;
-  }
-`;
-
-const Button = styled.button`
-  height: 50px;
-  width: 150px;
-  font-size: 20px;
-  background-color: #ff5300;
-  border-radius: 5px;
-  border-width: inherit;
-  cursor: pointer;
-  color: white;
-  margin-top: 50px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 `;

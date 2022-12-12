@@ -5,7 +5,7 @@ import Steps from "./Steps";
 const HowItWorks = () => {
   return (
     <Container id="howitworks-section">
-      <Title>איך זה עובד?</Title>
+      <Title>How it works?</Title>
       <Steps />
     </Container>
   );

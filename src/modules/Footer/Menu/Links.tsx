@@ -45,15 +45,13 @@ interface LinkProps {
 }
 
 const Link = styled.a<LinkProps>`
-  color: #ffffff;
   padding-bottom: 10px;
-  font-family: "Gambetta", serif;
   text-decoration: none;
   font-size: 16px;
   margin-right: 16px;
-  color: ${(props) => (props.isActive ? "#ff5300" : "#ffffff")};
+  color: ${(props) => (props.isActive ? "#447c99" : "black")};
 
   :hover {
-    color: #ff5300;
+    color: #447c99;
   }
 `;

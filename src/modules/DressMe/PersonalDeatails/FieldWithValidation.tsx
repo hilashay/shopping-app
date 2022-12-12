@@ -40,7 +40,6 @@ const PersonalField = styled(Field)`
   background-color: #ffffff;
   border: 1px solid;
   border-color: white;
-  font-family: "Gambetta", serif;
   font-size: 14px;
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 10%), 0 6px 20px 0 rgb(0 0 0 / 1%);
 `;

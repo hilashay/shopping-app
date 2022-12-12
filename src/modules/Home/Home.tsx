@@ -5,15 +5,11 @@ import { SectionContainer } from "../../components/General.styled";
 const Home = () => {
   return (
     <Container id="/">
-      <MainContainer>
-        <Content />
-        <ImageContainer>
-          <Image
-            src="https://i.pinimg.com/564x/e5/fa/b3/e5fab38a3300f8cd38e7a13443b09212.jpg"
-            alt="a"
-          />
-        </ImageContainer>
-      </MainContainer>
+      <Image
+        src="https://www.shutterstock.com/shutterstock/photos/1293384706/display_1500/stock-photo-woman-choosing-outfit-from-large-wardrobe-closet-with-stylish-clothes-and-home-stuff-1293384706.jpg"
+        alt="a"
+      />
+      <Content />
     </Container>
   );
 };
@@ -24,25 +20,16 @@ const Container = styled(SectionContainer)`
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #fff7f4;
-
+  flex-direction: column;
+  background-color: #eae0de;
   @media (max-width: 768px) {
     padding: 153px 40px 73px;
     height: auto;
   }
 `;
 
-const MainContainer = styled.div`
-  display: flex;
-`;
-
-const ImageContainer = styled.div`
-  width: 50%;
-`;
-
 const Image = styled.img`
   width: 100%;
-  max-width: 550px;
-  height: auto;
-  border-radius: 30px;
+  height: 100vh;
+  opacity: 0.9;
 `;

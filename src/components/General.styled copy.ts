@@ -9,7 +9,7 @@ export const Button = styled.button`
   height: 40px;
   width: 130px;
   font-size: 20px;
-  background-color: #447c99;
+  background-color: #93adc6;
   border-radius: 5px;
   border-width: inherit;
   cursor: pointer;
@@ -20,5 +20,5 @@ export const Button = styled.button`
 `;
 
 export const Span = styled.span`
-  color: #447c99;
+  color: #93adc6;
 `;

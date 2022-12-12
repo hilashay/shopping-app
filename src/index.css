@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: "Gambetta", serif;
+  font-family: "BrandonText,sans", serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -23,5 +23,5 @@ h6 {
   justify-content: center;
 }
 .paging-item.active * .paging-dot {
-  fill: #ff5300;
+  fill: #447c99;
 }

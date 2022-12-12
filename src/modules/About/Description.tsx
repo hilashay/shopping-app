@@ -18,7 +18,7 @@ const Description = () => {
         tempor fringilla mi. Elit a blandit faucibus est, dui interdum ut amet. Adipiscing feugiat
         vel at posuere in. Pellentesque volutpat vestibulum.
       </Text>
-      <Button>Dress me!</Button>
+      {/* <Button>Dress me</Button> */}
     </Container>
   );
 };

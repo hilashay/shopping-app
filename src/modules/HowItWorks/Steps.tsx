@@ -11,19 +11,19 @@ const steps = [
     img: "https://d3n78nkjl8tizo.cloudfront.net/stitch-fix/image/upload/q_auto:best/dpr_2.0/landing-pages/pages/US/gateway/Q3HowItWorks/hiw-style-preferences.svg",
     cardNumber: "01",
     title: "Tell us about your style",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.Ex esse commodi,modi perspiciatis voluptatum nemo ipsum qui tempora assumenda nulla adipisci cumque libero? Dicta odit incidunt voluptas eos optio. Reiciendis?",
+    text: "To help me learn what you like to wear, just fill the form, I'll have all the imformation I need to know to start looking for you cloths!",
   },
   {
     img: "https://d3n78nkjl8tizo.cloudfront.net/stitch-fix/image/upload/q_auto:best/dpr_2.0/landing-pages/pages/US/gateway/Q3HowItWorks/hiw-stylist-selections.svg",
     cardNumber: "02",
     title: "I'll pick pieces just for you",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.Ex esse commodi,modi perspiciatis voluptatum nemo ipsum qui tempora assumenda nulla adipisci cumque libero? Dicta odit incidunt voluptas eos optio. Reiciendis?",
+    text: "I'll begin gathering clothing reflect your style, fit and price points. Then I'll place the order and send it to your address.",
   },
   {
     img: "https://d3n78nkjl8tizo.cloudfront.net/stitch-fix/image/upload/q_auto:best/dpr_2.0/landing-pages/pages/US/gateway/Q3HowItWorks/hiw-personalized-shops.svg  ",
     cardNumber: "03",
-    title: "Clothing just show up at your house.",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.Ex esse commodi,modi perspiciatis voluptatum nemo ipsum qui tempora assumenda nulla adipisci cumque libero? Dicta odit incidunt voluptas eos optio. Reiciendis?",
+    title: "Clothing just show up at your house",
+    text: "Enjoy your new clothes once the order arrives at your house",
   },
 ];
 
@@ -81,7 +81,7 @@ const Img = styled.img`
 
 const Title = styled.div`
   color: #00000;
-  font-size: 16px;
+  font-size: 24px;
   margin-top: 10px;
   margin-bottom: 20px;
 `;
@@ -90,7 +90,7 @@ const Text = styled.p`
   height: 77px;
   width: 325px;
   color: #7b7b7b;
-  font-size: 14px;
+  font-size: 16px;
   @media (max-width: 768px) {
     width: 95%;
   }

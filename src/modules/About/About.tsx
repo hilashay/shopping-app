@@ -23,7 +23,7 @@ const About = () => {
 export default About;
 
 const Container = styled(SectionContainer)`
-  background-color: #fff7f4;
+  background: #eae0de;
   display: flex;
   flex-direction: column;
   padding-bottom: 72px;

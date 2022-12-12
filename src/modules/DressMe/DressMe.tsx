@@ -40,7 +40,7 @@ const DressMe = () => {
               <StyledForm>
                 <PersonalDetails />
                 <Sizes />
-                {/* <TextArea /> */}
+                <TextArea />
                 <FormButton type="submit">Submit</FormButton>
               </StyledForm>
             </FormContainer>
@@ -56,7 +56,7 @@ export default DressMe;
 const Container = styled(SectionContainer)`
   display: flex;
   padding: 100px 0 100px;
-  background: #e5e5e5;
+  background: #f5f5f5;
   flex-direction: column;
   align-items: center;
   margin-bottom: -83px;
@@ -91,4 +91,5 @@ const FormButton = styled(Button)`
   width: 150px;
   font-size: 15px;
   align-self: end;
+  bottom: -80px;
 `;
