@@ -11,25 +11,25 @@ export interface CardProps {
 
 const cards: CardProps[] = [
   {
-    imageUrl: "https://i.pinimg.com/564x/cf/32/5d/cf325d12d80120757b2e0b7db1e2f9a2.jpg",
+    imageUrl: "https://i.pinimg.com/564x/9d/b6/53/9db65387de45a91f292b0e37eb6b9eb2.jpg",
     name: "Hila Shay",
     jobName: "CEO,word yt",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit a laoreet libero dis eget maecenas bibendum. Morbi lacinia eu, etiam volutpat morbi et amet, sagittis adipiscing..",
   },
   {
-    imageUrl: "https://i.pinimg.com/564x/cf/32/5d/cf325d12d80120757b2e0b7db1e2f9a2.jpg",
+    imageUrl: "https://i.pinimg.com/564x/9d/b6/53/9db65387de45a91f292b0e37eb6b9eb2.jpg",
     name: "Idan Haviv",
     jobName: "Managing Director",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit a laoreet libero dis eget maecenas bibendum. Morbi lacinia eu, etiam volutpat morbi et amet, sagittis adipiscing. .",
   },
   {
-    imageUrl: "https://i.pinimg.com/564x/cf/32/5d/cf325d12d80120757b2e0b7db1e2f9a2.jpg",
+    imageUrl: "https://i.pinimg.com/564x/9d/b6/53/9db65387de45a91f292b0e37eb6b9eb2.jpg",
     name: "Shai Yahav",
     jobName: "CEO,word yt",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit a laoreet libero dis eget maecenas bibendum. Morbi lacinia eu, etiam volutpat morbi et amet, sagittis adipiscing..",
   },
   {
-    imageUrl: "https://i.pinimg.com/564x/cf/32/5d/cf325d12d80120757b2e0b7db1e2f9a2.jpg",
+    imageUrl: "https://i.pinimg.com/564x/9d/b6/53/9db65387de45a91f292b0e37eb6b9eb2.jpg",
     name: "Sefi Haviv",
     jobName: "Managing Director",
     text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sit a laoreet libero dis eget maecenas bibendum. Morbi lacinia eu, etiam volutpat morbi et amet, sagittis adipiscing. .",
@@ -65,6 +65,4 @@ export default ReviewList;
 const Container = styled(Carousel)`
   margin-bottom: 56px;
   margin-top: 56px;
-
-  // width: 100%; // Question: on about i shouldnt add "width", but here without width theres no option to add space between the cards.****
 `;

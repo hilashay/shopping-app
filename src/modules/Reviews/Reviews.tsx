@@ -19,5 +19,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   padding-top: 48px;
+  background: #f5f5f5;
+  margin-bottom: -83px;
   flex-direction: column;
 `;
