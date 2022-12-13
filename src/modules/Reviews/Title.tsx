@@ -23,4 +23,5 @@ const Container = styled.div`
 const TextRow = styled.h2`
   font-size: 40px;
   text-align: center;
+  letter-spacing: 1px;
 `;

@@ -9,7 +9,7 @@ const Footer = () => {
     <Container>
       <TopContainer>
         <Social />
-        <Menu />
+        {/* <Menu /> */}
       </TopContainer>
       <BottomFooter />
     </Container>

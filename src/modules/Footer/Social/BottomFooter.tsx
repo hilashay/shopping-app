@@ -4,7 +4,7 @@ import { SectionContainer } from "../../../components/General.styled";
 const BottomFooter = () => {
   return (
     <Container>
-      <CopyRightSymbol>&#169;</CopyRightSymbol> Copyright 2021. All Right Reserved By Ojjomedia
+      <CopyRightSymbol>&#169;</CopyRightSymbol> 2022 Hila Shay, Inc.
     </Container>
   );
 };
@@ -14,7 +14,7 @@ export default BottomFooter;
 const Container = styled(SectionContainer)`
   display: flex;
   flex-direction: row;
-  background: #2b282f;
+  background: #000000;
   padding-top: 18px;
   padding-bottom: 18px;
   color: #ffffff;

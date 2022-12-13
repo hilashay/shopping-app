@@ -31,5 +31,5 @@ const Container = styled(SectionContainer)`
 const Image = styled.img`
   width: 100%;
   height: 100vh;
-  opacity: 0.9;
+  opacity: 0.7;
 `;

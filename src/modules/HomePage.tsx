@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import About from "./About/About";
+import Brands from "./Brands/Brands";
 import Home from "./Home/Home";
 import HowItWorks from "./HowItWorks/HowItWorks";
 import Reviews from "./Reviews/Reviews";
@@ -10,7 +11,8 @@ function HomePage() {
       <Home />
       <HowItWorks />
       <About />
-      <Reviews />
+      {/* <Reviews /> */}
+      <Brands />
     </AppContainer>
   );
 }

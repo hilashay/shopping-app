@@ -21,4 +21,5 @@ const Container = styled.div`
 const Title = styled.h2`
   font-size: 40px;
   padding-bottom: 25px;
+  letter-spacing: 1px;
 `;

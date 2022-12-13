@@ -1,9 +1,3 @@
-import step1 from "../../../src/images/step1.webp";
-import step2 from "../../../src/images/step2.webp";
-import step3 from "../../../src/images/step3.webp";
-import step4 from "../../../src/images/step4.webp";
-import step5 from "../../../src/images/step5.webp";
-import step6 from "../../../src/images/step6.webp";
 import styled from "styled-components";
 
 const steps = [

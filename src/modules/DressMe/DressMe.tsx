@@ -7,11 +7,9 @@ import PersonalDetails from "./PersonalDeatails/PersonalDeatails";
 import Sizes from "./UserSizeSelection";
 import TextArea from "./TextArea";
 import { validate } from "./validate";
-import { NavHashLink } from "react-router-hash-link";
 import { useNavigate } from "react-router-dom";
-import React from "react";
 import { useFormDetails } from "../../providers/FormValuesContext";
-
+import { FontType } from "../../Utils/utils";
 const DressMe = () => {
   const navigate = useNavigate();
   const formDetails = useFormDetails();
@@ -22,6 +20,7 @@ const DressMe = () => {
   return (
     <Container id="form-section">
       <Title>Dress me</Title>
+      <SeconderyTitle>Tell me what you like, I’ll find what you love</SeconderyTitle>
       <Formik
         initialValues={initialValues}
         // validate={validate}
@@ -75,8 +74,15 @@ const Title = styled.h1`
   font-size: 39px;
   text-align: center;
   margin: 37px 0 26px;
+  letter-spacing: 1px;
 `;
 
+const SeconderyTitle = styled.h2`
+  // font-size: 39px;
+  text-align: center;
+  margin: 20px 0 26px;
+  letter-spacing: 1px;
+`;
 const StyledForm = styled(Form)`
   display: flex;
   width: 100%;
