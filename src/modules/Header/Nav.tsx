@@ -2,13 +2,13 @@ import { useState } from "react";
 import styled from "styled-components";
 import { NavHashLink } from "react-router-hash-link";
 
-type LinkLabel = "Home" | "How it works" | "About us" | "Reviews" | "Dress me";
+type LinkLabel = "Home" | "How it works" | "About us" | "Brands" | "Dress me";
 
 const links: Array<{ label: LinkLabel; path: string }> = [
   { label: "Home", path: "#hero-section" },
   { label: "How it works", path: "#howitworks-section" },
   { label: "About us", path: "#about-section" },
-  { label: "Reviews", path: "#reviews-section" },
+  { label: "Brands", path: "#brands-section" },
   { label: "Dress me", path: "form-section" },
 ];
 

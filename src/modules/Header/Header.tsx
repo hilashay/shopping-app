@@ -1,11 +1,14 @@
+import { useNavigate } from "react-router-dom";
+import { NavHashLink } from "react-router-hash-link";
 import styled from "styled-components";
 import logo from "../../../src/images/logo.png";
 import { Nav } from "./Nav";
 
 const Header = () => {
+  const navigate = useNavigate();
   return (
     <Container>
-      <Image src={logo} alt="error" />
+      <Image src={logo} alt="error" onClick={() => navigate("/")} />
       <Nav />
     </Container>
   );
@@ -29,11 +32,12 @@ const Container = styled.header`
 `;
 
 const Image = styled.img`
-  height: 68px;
-  width: 85px;
+  height: auto;
+  width: 230px;
   position: absolute;
   top: 10px;
   left: 135px;
+  cursor: pointer;
   @media (max-width: 768px) {
     left: 40px;
     height: 49px;
