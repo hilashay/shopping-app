@@ -9,10 +9,8 @@ bibendum.`;
 const Social = () => {
   return (
     <Container>
-      <Title>
-        <Span>Digie</Span>ncy
-      </Title>
-      <Text>{text}</Text>
+      <Title>{/* <Span>Soci</Span>al */}</Title>
+      {/* <Text>{text}</Text> */}
       <Icons />
     </Container>
   );
