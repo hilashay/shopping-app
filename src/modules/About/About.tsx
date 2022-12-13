@@ -9,7 +9,7 @@ const About = () => {
       <RowContainer>
         <ImageContainer>
           <Image
-            src="https://i.pinimg.com/564x/e5/fa/b3/e5fab38a3300f8cd38e7a13443b09212.jpg"
+            src="https://www.shutterstock.com/shutterstock/photos/2142899553/display_1500/stock-photo-working-woman-in-an-online-store-she-wears-casual-clothes-and-checks-the-customer-s-address-and-2142899553.jpg"
             alt="a"
           />
         </ImageContainer>
