@@ -44,4 +44,8 @@ const Container = styled.div`
   margin-top: 10px;
   flex-direction: row;
   justify-content: space-between;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;

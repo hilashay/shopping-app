@@ -29,7 +29,7 @@ const Container = styled(SectionContainer)`
   padding-bottom: 72px;
   padding-top: 49px;
   @media (max-width: 768px) {
-    padding: 0px 40px 20px;
+    padding: 0 20px 100px 20px;
   }
 `;
 
@@ -49,9 +49,8 @@ const Image = styled.img`
   border-radius: 30px;
   margin-top: 100px;
   @media (max-width: 768px) {
-    background: green;
-    width: 300px;
-    height: 200px;
-    margin-top: 150px;
+    width: 100%;
+    height: max-content;
+    margin-top: 120px;
   }
 `;
