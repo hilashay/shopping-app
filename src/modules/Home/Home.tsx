@@ -33,5 +33,6 @@ const Image = styled.img`
   @media (max-width: 768px) {
     width: 768px;
     height: auto;
+    padding-top: 140px;
   }
 `;
