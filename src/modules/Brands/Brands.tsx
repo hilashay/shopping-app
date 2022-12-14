@@ -26,10 +26,16 @@ const Container = styled(SectionContainer)`
   @media (max-width: 768px) {
     width: 88%;
   }
+  @media (max-width: 768px) {
+    text-align: center;
+  }
 `;
 
 const Title = styled.h1`
   padding: 30px 0;
   color: #447c99;
   letter-spacing: 1px;
+  @media (max-width: 390px) {
+    padding: 0 0 35px;
+  }
 `;
