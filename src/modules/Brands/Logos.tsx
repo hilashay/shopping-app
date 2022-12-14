@@ -8,14 +8,15 @@ const importAll = (r: any) => {
   return images;
 };
 const images = importAll(require.context("../../images/brands", false, /\.(png|jpe?g|svg)$/));
+console.log("images", images);
 const logosNames = Object.keys(images);
 
 const LogosList = () => {
   return (
     <Container>
-      {logosNames.map((x: any) => (
+      {logosNames.map((logo: any) => (
         <ImageContainer>
-          <Image src={images[x]}></Image>
+          <Image src={images[logo]}></Image>
         </ImageContainer>
       ))}
     </Container>
@@ -26,7 +27,6 @@ export default LogosList;
 
 const Container = styled.div`
   display: flex;
-
   flex-wrap: wrap;
   justify-content: space-between;
 `;
