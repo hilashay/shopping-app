@@ -31,7 +31,7 @@ const Container = styled.header`
   }
   @media (max-width: 390px) {
     padding: 18px;
-    width: 332px;
+    width: 100%;
   }
 `;
 

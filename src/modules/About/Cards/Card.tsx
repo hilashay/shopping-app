@@ -25,6 +25,10 @@ const Container = styled.div`
   @media (max-width: 768px) {
     width: 80%;
   }
+  @media (max-width: 768px) {
+    width: 95%;
+    padding: 15px 0;
+  }
 `;
 
 const Image = styled.img`
@@ -43,6 +47,9 @@ const Title = styled.p`
   @media (max-width: 768px) {
     font-size: 22px;
     margin-top: 5px;
+  }
+  @media (max-width: 768px) {
+    padding: 10px;
   }
 `;
 
