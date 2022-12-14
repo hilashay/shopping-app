@@ -35,7 +35,11 @@ export const Nav = () => {
   );
 };
 
-const Container = styled.nav``;
+const Container = styled.nav`
+  @media (max-width: 768px) {
+    margin-left: 50px;
+  }
+`;
 
 const LinkContainer = styled.div`
   display: inline-block;
@@ -54,5 +58,8 @@ const StyledLink = styled(NavHashLink)<LinkProps>`
 
   :hover {
     color: #447c99;
+  }
+  @media (max-width: 768px) {
+    font-size: 16px;
   }
 `;

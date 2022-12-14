@@ -9,7 +9,7 @@ const Content = () => {
       <Title>
         Discovering styles <Span>you love</Span> just got easier
       </Title>
-      <Button onClick={() => navigate("/form-section")}>Contact me</Button>
+      <MainButton onClick={() => navigate("/form-section")}>Contact me</MainButton>
     </Container>
   );
 };
@@ -32,9 +32,18 @@ const Title = styled.h1`
   text-shadow: 2px 2px 2px gray;
   color: white;
   letter-spacing: 1.5px;
-  // width: 70%;
   @media (max-width: 768px) {
-    font-size: 40px;
-    width: 100%;
+    font-size: 34px;
+    position: absolute;
+    bottom: 600px;
+  }
+`;
+
+const MainButton = styled(Button)`
+  @media (max-width: 768px) {
+    height: 30px;
+    width: 100px;
+    font-size: 16px;
+    bottom: 550px;
   }
 `;

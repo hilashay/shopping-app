@@ -40,7 +40,7 @@ const Image = styled.img`
   cursor: pointer;
   @media (max-width: 768px) {
     left: 40px;
-    height: 49px;
-    width: 65px;
+    height: auto;
+    width: 140px;
   }
 `;
