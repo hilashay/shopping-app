@@ -55,7 +55,8 @@ const Step = styled.div`
   align-items: center;
   border-radius: 10px;
   @media (max-width: 768px) {
-    width: 48%;
+    width: 100%;
+    padding: 30px 0;
   }
 `;
 
@@ -86,6 +87,5 @@ const Text = styled.p`
   color: #7b7b7b;
   font-size: 16px;
   @media (max-width: 768px) {
-    width: 95%;
   }
 `;
