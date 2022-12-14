@@ -24,6 +24,10 @@ const Container = styled.div`
   width: 263px;
   padding-right: 37px;
   padding-bottom: 60px;
+  @media (max-width: 390px) {
+    padding: 0;
+    width: 100%;
+  }
 `;
 
 const Title = styled.h2`

@@ -41,6 +41,10 @@ const Container = styled.div`
   flex-direction: row;
   justify-content: space-between;
   padding-right: 37px;
+  @media (max-width: 390px) {
+    padding: 0;
+    width: 100%;
+  }
 `;
 
 const Image = styled.img`
