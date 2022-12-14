@@ -61,7 +61,7 @@ const Container = styled(SectionContainer)`
   margin-bottom: -83px;
   min-height: 100vh;
   @media (max-width: 768px) {
-    padding: 0px 40px;
+    padding: 40px 40px;
   }
 `;
 
