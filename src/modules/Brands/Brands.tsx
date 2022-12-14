@@ -23,6 +23,9 @@ const Container = styled(SectionContainer)`
   width: 60%;
   align-self: center;
   flex-direction: column;
+  @media (max-width: 768px) {
+    width: 88%;
+  }
 `;
 
 const Title = styled.h1`
