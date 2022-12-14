@@ -39,6 +39,10 @@ const Container = styled.nav`
   @media (max-width: 768px) {
     margin-left: 50px;
   }
+  @media (max-width: 390px) {
+    margin-left: 230px;
+    width: 150px;
+  }
 `;
 
 const LinkContainer = styled.div`

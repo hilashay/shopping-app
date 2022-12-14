@@ -37,6 +37,12 @@ const Title = styled.h1`
     position: absolute;
     bottom: 600px;
   }
+  @media (max-width: 390px) {
+    font-size: 30px;
+    position: absolute;
+    padding: 0 50px;
+    bottom: 420px;
+  }
 `;
 
 const MainButton = styled(Button)`
@@ -45,5 +51,10 @@ const MainButton = styled(Button)`
     width: 100px;
     font-size: 16px;
     bottom: 550px;
+  }
+  @media (max-width: 390px) {
+    height: 32px;
+    width: 90px;
+    bottom: 388px;
   }
 `;

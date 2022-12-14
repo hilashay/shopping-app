@@ -29,6 +29,10 @@ const Container = styled.header`
   @media (max-width: 768px) {
     padding: 18px;
   }
+  @media (max-width: 390px) {
+    padding: 18px;
+    width: 332px;
+  }
 `;
 
 const Image = styled.img`
@@ -40,6 +44,11 @@ const Image = styled.img`
   cursor: pointer;
   @media (max-width: 768px) {
     left: 40px;
+    height: auto;
+    width: 140px;
+  }
+  @media (max-width: 390px) {
+    left: 10px;
     height: auto;
     width: 140px;
   }
