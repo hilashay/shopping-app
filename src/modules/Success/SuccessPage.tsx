@@ -58,6 +58,11 @@ const Container = styled.div`
     margin-left: 0;
     width: 500px;
   }
+  @media (max-width: 390px) {
+    padding: 25px 70px 0 70px;
+    margin-left: 0;
+    width: 150px;
+  }
 `;
 
 const FirstImg = styled.img`
@@ -82,6 +87,9 @@ const Img = styled.img`
   height: auto;
   width: 200px;
   border-radius: 50%;
+  @media (max-width: 390px) {
+    align-self: center;
+  }
 `;
 
 const Content = styled.div`
@@ -89,11 +97,17 @@ const Content = styled.div`
   // background: yellow;
   padding-bottom: 100px;
   flex-direction: row;
+  @media (max-width: 390px) {
+    flex-direction: column;
+  }
 `;
 const Details = styled.p`
   display: flex;
   flex-direction: column;
   margin-right: 160px;
+  @media (max-width: 390px) {
+    width: 300px;
+  }
 `;
 
 const Field = styled.div`
@@ -102,7 +116,15 @@ const Field = styled.div`
 `;
 const Label = styled.div`
   margin-right: 8px;
+  font-size: 19px;
+  @media (max-width: 390px) {
+    font-size: 18px;
+  }
 `;
 const Input = styled.div`
   color: gray;
+  font-size: 19px;
+  @media (max-width: 390px) {
+    font-size: 18px;
+  }
 `;
