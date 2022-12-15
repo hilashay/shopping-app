@@ -39,6 +39,10 @@ const MainContainer = styled(SectionContainer)`
   display: flex;
   padding-top: 160px;
   margin-left: 200px;
+  @media (max-width: 768px) {
+    margin: 0;
+    padding: 160px 0 0 60px;
+  }
 `;
 
 const Container = styled.div`
@@ -46,10 +50,14 @@ const Container = styled.div`
   width: 50%;
   padding: 80px 0 20px 160px;
   flex-direction: column;
-  // position: relative;
   margin-left: 100px;
   background: rgba(245, 245, 245, 255);
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 10%), 0 6px 20px 0 rgb(0 0 0 / 1%);
+  @media (max-width: 768px) {
+    padding: 25px 70px;
+    margin-left: 0;
+    width: 500px;
+  }
 `;
 
 const FirstImg = styled.img`
@@ -58,6 +66,12 @@ const FirstImg = styled.img`
   border-radius: 50%;
   margin-left: 150px;
   margin-bottom: 50px;
+
+  @media (max-width: 768px) {
+    align-self: center;
+    margin-left: 0;
+    padding-top: 10px;
+  }
 `;
 
 const Title = styled.h2`
