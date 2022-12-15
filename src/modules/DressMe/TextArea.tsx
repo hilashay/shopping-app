@@ -21,7 +21,11 @@ export default TextArea;
 const Container = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 530px;
+  width: 100%;
+  @media (max-width: 390px) {
+    justify-content: center;
+    width: 350px;
+  }
 `;
 
 const Text = styled.textarea`
