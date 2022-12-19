@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import { CardProps } from "./Cards";
 
-const Card = ({ image, title, text }: CardProps) => (
+const Card = ({ imageUrl, title, text }: CardProps) => (
   <Container>
-    <Image src={image} alt="error"></Image>
+    <Image src={imageUrl} alt="error"></Image>
     <Title>{title}</Title>
     <Text>{text}</Text>
   </Container>
