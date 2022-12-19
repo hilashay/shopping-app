@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { BLUEFONTCOLOR } from "../../components/Colors";
-import { SectionContainer } from "../../components/General.styled";
+import { SectionContainer } from "../../components/common/SectionContainer";
 import Logos from "./Logos";
 
 const Brands = () => {

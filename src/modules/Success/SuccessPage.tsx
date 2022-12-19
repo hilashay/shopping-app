@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import { SectionContainer } from "../../components/General.styled";
+import { SectionContainer } from "../../components/common/SectionContainer";
 import { useContext, useEffect, useState } from "react";
 import { MyContext } from "../../providers/FormValuesContext";
 import { changeFormatKeyValueToSuccessPage } from "../../Utils/utils";
-import { Span } from "../../components/General.styled";
+import { Span } from "../../components/common/Span";
 
 const SuccessPage = () => {
   const values = useContext<any>(MyContext);

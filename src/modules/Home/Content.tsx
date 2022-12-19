@@ -1,6 +1,7 @@
-import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import { Span, Button } from "../../components/General.styled";
+import { useNavigate } from "react-router-dom";
+import { Span } from "../../components/common/Span";
+import { Button } from "../../components/common/Button";
 
 const Content = () => {
   const navigate = useNavigate();

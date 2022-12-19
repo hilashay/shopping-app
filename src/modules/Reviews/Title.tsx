@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Span } from "../../components/General.styled";
+import { Span } from "../../components/common/Span";
 
 const Title = () => {
   return (

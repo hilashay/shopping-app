@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { SectionContainer } from "../../components/General.styled";
+import { SectionContainer } from "../../components/common/SectionContainer";
 import BottomFooter from "./Social/BottomFooter";
 import Social from "./Social/Social";
 import { PINKBACKGROUND } from "../../components/Colors";

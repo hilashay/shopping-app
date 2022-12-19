@@ -1,7 +1,8 @@
 import { Form, Formik, useFormik } from "formik";
 import { useContext, useEffect } from "react";
 import styled from "styled-components";
-import { Button, SectionContainer } from "../../components/General.styled";
+import { Button } from "../../components/common/Button";
+import { SectionContainer } from "../../components/common/SectionContainer";
 import { initialValues } from "./initialValues";
 import PersonalDetails from "./PersonalDeatails/PersonalDeatails";
 import Sizes from "./UserSizeSelection";

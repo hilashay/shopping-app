@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Content from "./Content";
-import { SectionContainer } from "../../components/General.styled";
+import { SectionContainer } from "../../components/common/SectionContainer";
 import { PINKBACKGROUND } from "../../components/Colors";
 
 const Home = () => {
