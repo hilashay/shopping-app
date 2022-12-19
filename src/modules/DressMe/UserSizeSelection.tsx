@@ -45,7 +45,3 @@ const Select = styled.select`
   border-color: white;
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 10%), 0 6px 20px 0 rgb(0 0 0 / 1%);
 `;
-
-function setFieldValue(arg0: string, value: any): void {
-  throw new Error("Function not implemented.");
-}
