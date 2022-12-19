@@ -2,13 +2,13 @@ import { useField } from "formik";
 import styled from "styled-components";
 
 const TextArea = () => {
-  const [value, meta, teztAreaHelpers] = useField("other");
+  const [value, meta, { setValue }] = useField("other");
 
   return (
     <Container>
       <Text
         onChange={(e: any) => {
-          teztAreaHelpers.setValue(e.target.value);
+          setValue(e.target.value);
         }}
         placeholder="There's something you want to shere with me? Something you like to wear/never wear? (color, skinny, loose, etc..)"
       ></Text>
