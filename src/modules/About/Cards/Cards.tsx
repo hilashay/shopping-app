@@ -29,12 +29,13 @@ const cards: CardProps[] = [
 ];
 
 const Cards = () => {
-  const renderCards = () =>
-    cards.map(({ imageUrl, title, text }, index) => (
-      <Card imageUrl={imageUrl} title={title} key={index} text={text} />
-    ));
-
-  return <Container>{renderCards()}</Container>;
+  return (
+    <Container>
+      {cards.map(({ imageUrl, title, text }, index) => (
+        <Card imageUrl={imageUrl} title={title} key={index} text={text} />
+      ))}
+    </Container>
+  );
 };
 
 export default Cards;
