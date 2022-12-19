@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { SectionContainer } from "../../components/General.styled";
 import { useContext, useEffect, useState } from "react";
 import { MyContext } from "../../providers/FormValuesContext";
-import { formatKeyAndValue } from "../../Utils/utils";
+import { changeFormatKeyValueToSuccessPage } from "../../Utils/utils";
 import { Span } from "../../components/General.styled";
 
 const SuccessPage = () => {
@@ -21,8 +21,8 @@ const SuccessPage = () => {
           <Details>
             {keysAndValues.map((x: any) => (
               <Field>
-                <Label>{formatKeyAndValue(x?.[0])}: </Label>
-                <Input>{formatKeyAndValue(x?.[1])}</Input>
+                <Label>{changeFormatKeyValueToSuccessPage(x?.[0])}: </Label>
+                <Input>{changeFormatKeyValueToSuccessPage(x?.[1])}</Input>
               </Field>
             ))}
           </Details>

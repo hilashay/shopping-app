@@ -1,10 +1,11 @@
-export const formatKeyAndValue = (key: any) => {
-  console.log("key.length", key);
-  if (typeof key === "number") {
-    key.toString();
-    return key;
+export const changeFormatKeyValueToSuccessPage = (key: any) => {
+  switch (key) {
+    case "number":
+      return key.toString();
+
+    default:
+      return key?.charAt(0).toUpperCase() + key?.slice(1).replace(/[A-Z]/g, " $&").trim();
   }
-  return key?.charAt(0).toUpperCase() + key?.slice(1).replace(/[A-Z]/g, " $&").trim();
 };
 
 export const FontType = () => {
