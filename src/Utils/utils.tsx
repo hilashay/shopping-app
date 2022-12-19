@@ -5,9 +5,3 @@ export const changeFormatKeyValueToSuccessPage = (key: number | string) => {
   }
   return key?.charAt(0).toUpperCase() + key?.slice(1).replace(/[A-Z]/g, " $&").trim();
 };
-
-export const FontType = () => {
-  return (
-    <style> @import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap'); </style>
-  );
-};

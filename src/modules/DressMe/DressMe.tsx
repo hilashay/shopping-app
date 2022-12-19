@@ -9,7 +9,6 @@ import TextArea from "./TextArea";
 import { validate } from "./validate";
 import { useNavigate } from "react-router-dom";
 import { useFormDetails } from "../../providers/FormValuesContext";
-import { FontType } from "../../Utils/utils";
 const DressMe = () => {
   const navigate = useNavigate();
   const formDetails = useFormDetails();
