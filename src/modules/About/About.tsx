@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { SectionContainer } from "../../components/common/SectionContainer";
 import Cards from "./Cards/Cards";
-import Description from "./Description";
+import Introduction from "./Introduction";
 import { PINKBACKGROUND } from "../../components/Colors";
 
 const About = () => {
@@ -14,7 +14,7 @@ const About = () => {
             alt="a"
           />
         </ImageContainer>
-        <Description />
+        <Introduction />
       </RowContainer>
       <Cards />
     </Container>

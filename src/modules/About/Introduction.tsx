@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Span } from "../../components/common/Span";
 import { Button } from "../../components/common/Button";
 
-const Description = () => {
+const Introduction = () => {
   const navigate = useNavigate();
   return (
     <Container>
@@ -37,7 +37,7 @@ const Description = () => {
   );
 };
 
-export default Description;
+export default Introduction;
 
 const Container = styled.div`
   display: flex;
