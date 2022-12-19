@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Content from "./Content";
 import { SectionContainer } from "../../components/General.styled";
+import { PINKBACKGROUND } from "../../components/Colors";
 
 const Home = () => {
   return (
@@ -21,7 +22,7 @@ const Container = styled(SectionContainer)`
   align-items: center;
   height: 100vh;
   flex-direction: column;
-  background-color: #eae0de;
+  background-color: ${PINKBACKGROUND};
   @media (max-width: 768px) {
     padding: 153px 40px 73px;
     height: auto;

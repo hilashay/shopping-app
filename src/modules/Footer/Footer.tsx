@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { SectionContainer } from "../../components/General.styled";
-import Menu from "./Menu/Menu";
 import BottomFooter from "./Social/BottomFooter";
 import Social from "./Social/Social";
+import { PINKBACKGROUND } from "../../components/Colors";
 
 const Footer = () => {
   return (
@@ -26,7 +26,7 @@ const Container = styled.div`
 
 const TopContainer = styled(SectionContainer)`
   flex-direction: row;
-  background: #eae0de;
+  background: ${PINKBACKGROUND};
   padding-top: 66px;
   @media (max-width: 768px) {
     padding: 60px 0 10px 40px;

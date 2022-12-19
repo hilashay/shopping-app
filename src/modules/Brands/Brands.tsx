@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { BLUEFONTCOLOR } from "../../components/Colors";
 import { SectionContainer } from "../../components/General.styled";
 import Logos from "./Logos";
 
@@ -27,6 +28,6 @@ const Container = styled(SectionContainer)`
 
 const Title = styled.h1`
   padding: 30px 0;
-  color: #447c99;
+  color: ${BLUEFONTCOLOR};
   letter-spacing: 1px;
 `;

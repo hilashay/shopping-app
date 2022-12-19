@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { SectionContainer } from "../../components/General.styled";
 import Steps from "./Steps";
+import { GRAYBACKGROUND } from "../../components/Colors";
 
 const HowItWorks = () => {
   return (
@@ -16,7 +17,7 @@ export default HowItWorks;
 const Container = styled(SectionContainer)`
   display: flex;
   flex-direction: column;
-  background: #f5f5f5;
+  background: ${GRAYBACKGROUND};
   padding-top: 100px;
   padding-bottom: 120px;
   @media (max-width: 768px) {

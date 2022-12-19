@@ -1,6 +1,7 @@
 import { useState } from "react";
 import styled from "styled-components";
 import { NavHashLink } from "react-router-hash-link";
+import { BLUEFONTCOLOR } from "../../components/Colors";
 
 type LinkLabel = "Home" | "How it works" | "About us" | "Brands" | "Dress me";
 
@@ -50,9 +51,9 @@ const StyledLink = styled(NavHashLink)<LinkProps>`
   text-decoration: none;
   font-size: 20px;
   margin-right: 16px;
-  color: ${(props) => (props.isActive ? "#447c99" : "#000000")};
+  color: ${(props) => (props.isActive ? BLUEFONTCOLOR : "#000000")};
 
   :hover {
-    color: #447c99;
+    color: ${BLUEFONTCOLOR};
   }
 `;

@@ -9,6 +9,8 @@ import TextArea from "./TextArea";
 import { validate } from "./validate";
 import { useNavigate } from "react-router-dom";
 import { useFormDetails } from "../../providers/FormValuesContext";
+import { GRAYBACKGROUND } from "../../components/Colors";
+
 const DressMe = () => {
   const navigate = useNavigate();
   const formDetails = useFormDetails();
@@ -54,7 +56,7 @@ export default DressMe;
 const Container = styled(SectionContainer)`
   display: flex;
   padding: 100px 0 100px;
-  background: #f5f5f5;
+  background: ${GRAYBACKGROUND};
   flex-direction: column;
   align-items: center;
   margin-bottom: -83px;

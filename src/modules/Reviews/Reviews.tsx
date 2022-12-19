@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { SectionContainer } from "../../components/General.styled";
 import ReviewsList from "./ReviewList/ReviewsList";
 import Title from "./Title";
+import { GRAYBACKGROUND } from "../../components/Colors";
 
 const Reviews = () => {
   return (
@@ -19,7 +20,7 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   padding: 48px 0;
-  background: #f5f5f5;
+  background: ${GRAYBACKGROUND};
   margin-bottom: -83px;
   flex-direction: column;
 `;

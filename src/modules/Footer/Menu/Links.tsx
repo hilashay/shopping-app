@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styled from "styled-components";
+import { BLUEFONTCOLOR } from "../../../components/Colors";
 
 type LinkLabel = "About Us" | "Our Work" | "Client" | "Our Blog" | "Contact US";
 
@@ -49,9 +50,9 @@ const Link = styled.a<LinkProps>`
   text-decoration: none;
   font-size: 16px;
   margin-right: 16px;
-  color: ${(props) => (props.isActive ? "#447c99" : "black")};
+  color: ${(props) => (props.isActive ? BLUEFONTCOLOR : "black")};
 
   :hover {
-    color: #447c99;
+    color: ${BLUEFONTCOLOR};
   }
 `;

@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { SectionContainer } from "../../components/General.styled";
 import Cards from "./Cards/Cards";
 import Description from "./Description";
+import { PINKBACKGROUND } from "../../components/Colors";
 
 const About = () => {
   return (
@@ -23,7 +24,7 @@ const About = () => {
 export default About;
 
 const Container = styled(SectionContainer)`
-  background: #eae0de;
+  background: ${PINKBACKGROUND};
   display: flex;
   flex-direction: column;
   padding-bottom: 72px;

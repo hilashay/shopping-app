@@ -46,7 +46,6 @@ const Container = styled.div`
   width: 50%;
   padding: 80px 0 20px 160px;
   flex-direction: column;
-  // position: relative;
   margin-left: 100px;
   background: rgba(245, 245, 245, 255);
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 10%), 0 6px 20px 0 rgb(0 0 0 / 1%);
