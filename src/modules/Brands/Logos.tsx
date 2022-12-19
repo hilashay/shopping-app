@@ -1,9 +1,11 @@
 import styled from "styled-components";
 
 const importAll = (r: any) => {
+  console.log("r.keys", r.keys());
   let images: any = {};
   r.keys().map((item: any) => {
     images[item.replace("./", "")] = r(item);
+    console.log("images inside:", images);
   });
   return images;
 };
