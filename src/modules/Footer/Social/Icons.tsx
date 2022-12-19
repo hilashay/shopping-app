@@ -25,13 +25,15 @@ const icons: Array<{ ImageUrl: string; alt: string; urlAdress: any }> = [
 ];
 
 const Icons = () => {
-  const renderIcons = () =>
-    icons.map(({ ImageUrl, alt, urlAdress }, index) => (
-      <a href={urlAdress}>
-        <Image key={index} src={ImageUrl} alt={alt} />
-      </a>
-    ));
-  return <Container>{renderIcons()}</Container>;
+  return (
+    <Container>
+      {icons.map(({ ImageUrl, alt, urlAdress }, index) => (
+        <a href={urlAdress}>
+          <Image key={index} src={ImageUrl} alt={alt} />
+        </a>
+      ))}
+    </Container>
+  );
 };
 
 export default Icons;
