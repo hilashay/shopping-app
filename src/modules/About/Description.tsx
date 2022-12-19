@@ -32,7 +32,7 @@ const Description = () => {
           is a need that is still underserved on the needs list.
         </Text>
       </Text>
-      <AboutButton onClick={() => navigate("/form-section")}>Dress me</AboutButton>
+      <NavigateButton onClick={() => navigate("/form-section")}>Dress me</NavigateButton>
     </Container>
   );
 };
@@ -72,7 +72,7 @@ const Text = styled.div`
   }
 `;
 
-const AboutButton = styled(Button)`
+const NavigateButton = styled(Button)`
   position: unset;
   margin-top: 25px;
 `;
