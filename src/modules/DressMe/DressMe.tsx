@@ -63,7 +63,10 @@ const Container = styled(SectionContainer)`
   margin-bottom: -83px;
   min-height: 100vh;
   @media (max-width: 768px) {
-    padding: 0px 40px;
+    padding: 40px 40px;
+  }
+  @media (max-width: 390px) {
+    padding: 140px 40px;
   }
 `;
 
@@ -80,10 +83,10 @@ const Title = styled.h1`
 `;
 
 const SeconderyTitle = styled.h2`
-  // font-size: 39px;
   text-align: center;
-  margin: 20px 0 26px;
+  margin: 0 0 26px;
   letter-spacing: 1px;
+  color: #447c99;
 `;
 const StyledForm = styled(Form)`
   display: flex;
@@ -100,4 +103,7 @@ const FormButton = styled(Button)`
   font-size: 15px;
   align-self: end;
   bottom: -80px;
+  @media (max-width: 390px) {
+    margin-right: 28px;
+  }
 `;

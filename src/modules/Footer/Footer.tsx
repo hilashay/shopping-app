@@ -29,6 +29,6 @@ const TopContainer = styled(SectionContainer)`
   background: ${PINKBACKGROUND};
   padding-top: 66px;
   @media (max-width: 768px) {
-    padding: 60px 0 10px 40px;
+    padding: 40px 0 40px 40px;
   }
 `;

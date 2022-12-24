@@ -32,4 +32,9 @@ const SecondaryContainer = styled.div`
   justify-content: space-between;
   margin-bottom: 18px;
   width: 530px;
+  @media (max-width: 390px) {
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 0;
+  }
 `;

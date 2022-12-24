@@ -42,4 +42,9 @@ const PersonalField = styled(Field)`
   border-color: white;
   font-size: 14px;
   box-shadow: 0 4px 8px 0 rgb(0 0 0 / 10%), 0 6px 20px 0 rgb(0 0 0 / 1%);
+  @media (max-width: 390px) {
+    height: 45px;
+    width: 350px;
+    margin-bottom: 20px;
+  }
 `;

@@ -47,7 +47,11 @@ const Container = styled.div`
   width: 50%;
   padding: 49px 0 93px;
   @media (max-width: 768px) {
-    padding: 80px 0 84px;
+    padding: 80px 0 0 5px;
+    margin-left: 22px;
+  }
+  @media (max-width: 390px) {
+    padding: 35px 0 0 5px;
     margin-left: 22px;
   }
 `;
@@ -62,6 +66,9 @@ const PageLabel = styled.p`
 const TextRow = styled.h1`
   font-size: 40px;
   letter-spacing: 1px;
+  @media (max-width: 768px) {
+    width: 332px;
+  }
 `;
 
 const Text = styled.div`

@@ -24,12 +24,16 @@ const Container = styled(SectionContainer)`
   flex-direction: column;
   background-color: ${PINKBACKGROUND};
   @media (max-width: 768px) {
-    padding: 153px 40px 73px;
-    height: auto;
+    height: 100%;
   }
 `;
 
 const Image = styled.img`
   height: 100vh;
   opacity: 0.7;
+  @media (max-width: 768px) {
+    width: 768px;
+    height: auto;
+    padding-top: 140px;
+  }
 `;

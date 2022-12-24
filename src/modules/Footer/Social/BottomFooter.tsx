@@ -18,6 +18,9 @@ const Container = styled(SectionContainer)`
   padding-top: 18px;
   padding-bottom: 18px;
   color: #ffffff;
+  @media (max-width: 390px) {
+    padding: 20px 10px 10px 40px;
+  }
 `;
 
 const CopyRightSymbol = styled.div`
