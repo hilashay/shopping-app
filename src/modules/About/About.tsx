@@ -4,7 +4,11 @@ import Cards from "./Cards/Cards";
 import Introduction from "./Introduction";
 import { PINKBACKGROUND } from "../../components/Colors";
 
-const About = () => {
+interface AboutProps {
+  onClickDressMe: VoidFunction;
+}
+
+const About: React.FC<AboutProps> = ({ onClickDressMe }) => {
   return (
     <Container id="about-section">
       <RowContainer>
@@ -14,7 +18,7 @@ const About = () => {
             alt="a"
           />
         </ImageContainer>
-        <Introduction />
+        <Introduction onClickDressMe={onClickDressMe} />
       </RowContainer>
       <Cards />
     </Container>

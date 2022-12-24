@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import About from "./About/About";
 import Brands from "./Brands/Brands";
@@ -6,11 +7,12 @@ import HowItWorks from "./HowItWorks/HowItWorks";
 import Reviews from "./Reviews/Reviews";
 
 function HomePage() {
+  const navigate = useNavigate();
   return (
     <AppContainer id="hero-section">
       <Home />
       <HowItWorks />
-      <About />
+      <About onClickDressMe={() => navigate("/form-section")} />
       {/* <Reviews /> */}
       <Brands />
     </AppContainer>

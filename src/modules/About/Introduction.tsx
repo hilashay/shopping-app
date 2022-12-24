@@ -1,10 +1,12 @@
-import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import { Span } from "../../components/common/Span";
 import { Button } from "../../components/common/Button";
+import { Span } from "../../components/common/Span";
 
-const Introduction = () => {
-  const navigate = useNavigate();
+interface IntroductionProps {
+  onClickDressMe: VoidFunction;
+}
+
+const Introduction: React.FC<IntroductionProps> = ({ onClickDressMe }) => {
   return (
     <Container>
       <PageLabel>About us</PageLabel>
@@ -32,7 +34,7 @@ const Introduction = () => {
           is a need that is still underserved on the needs list.
         </Text>
       </Text>
-      <NavigateButton onClick={() => navigate("/form-section")}>Dress me</NavigateButton>
+      <DressMeButton onClick={onClickDressMe}>Dress me</DressMeButton>
     </Container>
   );
 };
@@ -72,7 +74,7 @@ const Text = styled.div`
   }
 `;
 
-const NavigateButton = styled(Button)`
+const DressMeButton = styled(Button)`
   position: unset;
   margin-top: 25px;
 `;
