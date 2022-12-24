@@ -38,7 +38,7 @@ export const Nav = () => {
 
 const Container = styled.nav`
   @media (max-width: 768px) {
-    margin-left: 50px;
+    margin-left: 90px;
   }
   @media (max-width: 390px) {
     margin-left: 230px;

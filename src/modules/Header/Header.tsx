@@ -45,7 +45,7 @@ const Image = styled.img`
   @media (max-width: 768px) {
     left: 40px;
     height: auto;
-    width: 140px;
+    width: 180px;
   }
   @media (max-width: 390px) {
     left: 10px;
