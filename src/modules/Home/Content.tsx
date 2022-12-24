@@ -1,16 +1,16 @@
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
+import { Span } from "../../components/common/Span";
+import { Button } from "../../components/common/Button";
 
 const Content = () => {
+  const navigate = useNavigate();
   return (
     <Container>
       <Title>
-        We Are The Best <span style={{ color: "#FF5300" }}>Digital Agency</span> for business
+        Discovering styles <Span>you love</Span> just got easier
       </Title>
-      <SubTitle>
-        Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia
-        consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
-      </SubTitle>
-      <Button>Contact Us</Button>
+      <MainButton onClick={() => navigate("/form-section")}>Contact me</MainButton>
     </Container>
   );
 };
@@ -20,30 +20,42 @@ export default Content;
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  width: 50%;
+  position: rtelative;
+  align-items: center;
+  width: 100%;
 `;
 
 const Title = styled.h1`
   margin: 23px 0 11px;
-  font-size: 48px;
-  width: 70%;
-`;
-
-const SubTitle = styled.p`
-  font-size: 16px;
-  color: #7b7b7b;
-  width: 400px;
-`;
-
-const Button = styled.button`
-  height: 50px;
-  width: 150px;
-  font-size: 20px;
-  background-color: #ff5300;
-  border-radius: 5px;
-  border-width: inherit;
-  cursor: pointer;
+  font-size: 42px;
+  position: absolute;
+  bottom: 350px;
+  text-shadow: 2px 2px 2px gray;
   color: white;
-  margin-top: 50px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  letter-spacing: 1.5px;
+  @media (max-width: 768px) {
+    font-size: 34px;
+    position: absolute;
+    bottom: 600px;
+  }
+  @media (max-width: 390px) {
+    font-size: 30px;
+    position: absolute;
+    padding: 0 50px;
+    bottom: 420px;
+  }
+`;
+
+const MainButton = styled(Button)`
+  @media (max-width: 768px) {
+    height: 30px;
+    width: 100px;
+    font-size: 16px;
+    bottom: 550px;
+  }
+  @media (max-width: 390px) {
+    height: 32px;
+    width: 90px;
+    bottom: 380px;
+  }
 `;

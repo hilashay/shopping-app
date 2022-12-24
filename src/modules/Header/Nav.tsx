@@ -1,37 +1,50 @@
 import { useState } from "react";
 import styled from "styled-components";
+import { NavHashLink } from "react-router-hash-link";
+import { BLUEFONTCOLOR } from "../../components/Colors";
 
-type LinkLabel = "Home" | "How it works" | "About us" | "Reviews";
+type LinkLabel = "Home" | "How it works" | "About us" | "Brands" | "Dress me";
 
 const links: Array<{ label: LinkLabel; path: string }> = [
-  { label: "Home", path: "#home-section" },
-  { label: "How it works", path: "#form-section" },
-  { label: "About us", path: "#" },
-  { label: "Reviews", path: "#reviews-section" },
+  { label: "Home", path: "#hero-section" },
+  { label: "How it works", path: "#howitworks-section" },
+  { label: "About us", path: "#about-section" },
+  { label: "Brands", path: "#brands-section" },
+  { label: "Dress me", path: "form-section" },
 ];
 
 export const Nav = () => {
   const [active, setActive] = useState<LinkLabel>("Home");
 
-  const renderLinks = () =>
-    links.map(({ path, label }) => (
-      <LinkContainer key={`nav-link-${label}`}>
-        <Link
-          href={path}
-          isActive={active === label}
-          onClick={() => {
-            setActive(label);
-          }}
-        >
-          {label}
-        </Link>
-      </LinkContainer>
-    ));
-
-  return <Container>{renderLinks()}</Container>;
+  return (
+    <Container>
+      {links.map(({ path, label }) => (
+        <LinkContainer key={`nav-link-${label}`}>
+          <StyledLink
+            to={`/${path}`}
+            isActive={active === label}
+            onClick={() => {
+              console.log("label", label);
+              setActive(label);
+            }}
+          >
+            {label}
+          </StyledLink>
+        </LinkContainer>
+      ))}
+    </Container>
+  );
 };
 
-const Container = styled.nav``;
+const Container = styled.nav`
+  @media (max-width: 768px) {
+    margin-left: 90px;
+  }
+  @media (max-width: 390px) {
+    margin-left: 230px;
+    width: 150px;
+  }
+`;
 
 const LinkContainer = styled.div`
   display: inline-block;
@@ -42,14 +55,16 @@ interface LinkProps {
   isActive: boolean;
 }
 
-const Link = styled.a<LinkProps>`
-  font-family: "Gambetta", serif;
+const StyledLink = styled(NavHashLink)<LinkProps>`
   text-decoration: none;
   font-size: 20px;
   margin-right: 16px;
-  color: ${(props) => (props.isActive ? "#ff5300" : "#000000")};
+  color: ${(props) => (props.isActive ? BLUEFONTCOLOR : "#000000")};
 
   :hover {
-    color: #ff5300;
+    color: ${BLUEFONTCOLOR};
+  }
+  @media (max-width: 768px) {
+    font-size: 16px;
   }
 `;

@@ -1,20 +1,25 @@
 import styled from "styled-components";
-import { SectionContainer } from "../../components/General.styled";
+import { SectionContainer } from "../../components/common/SectionContainer";
 import Cards from "./Cards/Cards";
-import Description from "./Description";
+import Introduction from "./Introduction";
+import { PINKBACKGROUND } from "../../components/Colors";
 
-const About = () => {
+interface AboutProps {
+  onClickDressMe: VoidFunction;
+}
+
+const About: React.FC<AboutProps> = ({ onClickDressMe }) => {
   return (
     <Container id="about-section">
-      <TopContainer>
+      <RowContainer>
         <ImageContainer>
           <Image
-            src="https://i.pinimg.com/564x/e5/fa/b3/e5fab38a3300f8cd38e7a13443b09212.jpg"
+            src="https://www.shutterstock.com/shutterstock/photos/2142899553/display_1500/stock-photo-working-woman-in-an-online-store-she-wears-casual-clothes-and-checks-the-customer-s-address-and-2142899553.jpg"
             alt="a"
           />
         </ImageContainer>
-        <Description />
-      </TopContainer>
+        <Introduction onClickDressMe={onClickDressMe} />
+      </RowContainer>
       <Cards />
     </Container>
   );
@@ -23,16 +28,22 @@ const About = () => {
 export default About;
 
 const Container = styled(SectionContainer)`
-  background-color: #fff7f4;
+  background: ${PINKBACKGROUND};
   display: flex;
   flex-direction: column;
   padding-bottom: 72px;
   padding-top: 49px;
+  @media (max-width: 768px) {
+    padding: 0 20px 50px 20px;
+  }
 `;
 
-const TopContainer = styled.div`
+const RowContainer = styled.div`
   display: flex;
   flex-direction: row;
+  @media (max-width: 390px) {
+    flex-direction: column;
+  }
 `;
 
 const ImageContainer = styled.div`
@@ -45,4 +56,14 @@ const Image = styled.img`
   width: auto;
   border-radius: 30px;
   margin-top: 100px;
+  @media (max-width: 768px) {
+    width: 100%;
+    height: max-content;
+    margin-top: 120px;
+  }
+  @media (max-width: 390px) {
+    width: 330px;
+    height: max-content;
+    margin-top: 50px;
+  }
 `;

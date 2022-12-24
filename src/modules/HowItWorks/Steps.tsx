@@ -1,58 +1,31 @@
-import step1 from "../../../src/images/step1.webp";
-import step2 from "../../../src/images/step2.webp";
-import step3 from "../../../src/images/step3.webp";
-import step4 from "../../../src/images/step4.webp";
-import step5 from "../../../src/images/step5.webp";
-import step6 from "../../../src/images/step6.webp";
 import styled from "styled-components";
 
 const steps = [
   {
-    img: step1,
+    img: "https://d3n78nkjl8tizo.cloudfront.net/stitch-fix/image/upload/q_auto:best/dpr_2.0/landing-pages/pages/US/gateway/Q3HowItWorks/hiw-style-preferences.svg",
     cardNumber: "01",
-    title: "Send me your details",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.Ex esse commodi,modi perspiciatis voluptatum nemo ipsum qui tempora assumenda nulla adipisci cumque libero? Dicta odit incidunt voluptas eos optio. Reiciendis?",
+    title: "Tell us about your style",
+    text: "To help me learn what you like to wear, just fill the form, I'll have all the imformation I need to know to start looking for you cloths!",
   },
   {
-    img: step2,
+    img: "https://d3n78nkjl8tizo.cloudfront.net/stitch-fix/image/upload/q_auto:best/dpr_2.0/landing-pages/pages/US/gateway/Q3HowItWorks/hiw-stylist-selections.svg",
     cardNumber: "02",
-    title: "Send me your details",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.Ex esse commodi,modi perspiciatis voluptatum nemo ipsum qui tempora assumenda nulla adipisci cumque libero? Dicta odit incidunt voluptas eos optio. Reiciendis?",
+    title: "I'll pick pieces just for you",
+    text: "I'll begin gathering clothing reflect your style, fit and price points. Then I'll place the order and send it to your address.",
   },
   {
-    img: step3,
+    img: "https://d3n78nkjl8tizo.cloudfront.net/stitch-fix/image/upload/q_auto:best/dpr_2.0/landing-pages/pages/US/gateway/Q3HowItWorks/hiw-personalized-shops.svg  ",
     cardNumber: "03",
-    title: "Send me your details",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.Ex esse commodi,modi perspiciatis voluptatum nemo ipsum qui tempora assumenda nulla adipisci cumque libero? Dicta odit incidunt voluptas eos optio. Reiciendis?",
-  },
-  {
-    img: step4,
-    cardNumber: "04",
-    title: "Send me your details",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.Ex esse commodi,modi perspiciatis voluptatum nemo ipsum qui tempora assumenda nulla adipisci cumque libero? Dicta odit incidunt voluptas eos optio. Reiciendis?",
-  },
-  {
-    img: step5,
-    cardNumber: "05",
-    title: "Send me your details",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.Ex esse commodi,modi perspiciatis voluptatum nemo ipsum qui tempora assumenda nulla adipisci cumque libero? Dicta odit incidunt voluptas eos optio. Reiciendis?",
-  },
-  {
-    img: step6,
-    cardNumber: "06",
-    title: "Send me your details",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.Ex esse commodi,modi perspiciatis voluptatum nemo ipsum qui tempora assumenda nulla adipisci cumque libero? Dicta odit incidunt voluptas eos optio. Reiciendis?",
+    title: "Clothing just show up at your house",
+    text: "Enjoy your new clothes once the order arrives at your house",
   },
 ];
 
 const Steps = () => {
   const renderSteps = () =>
-    steps.map(({ img, cardNumber, title, text }) => (
-      <Step>
-        <ImgAndNumberContainer>
-          <Img src={img} alt="error" />
-          <NumberOfCard>{cardNumber}</NumberOfCard>
-        </ImgAndNumberContainer>
+    steps.map(({ img, cardNumber, title, text }, index) => (
+      <Step key={index}>
+        <Img src={img} alt="error" />
         <TextContainer>
           <Title>{title}</Title>
           <Text>{text}</Text>
@@ -79,42 +52,35 @@ const Step = styled.div`
   margin-bottom: 30px;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.1);
+  align-items: center;
   border-radius: 10px;
-`;
-
-const ImgAndNumberContainer = styled.div`
-  margin-top: 30px;
-  margin-left: 25px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-`;
-
-const NumberOfCard = styled.p`
-  margin-right: 20px;
-  height: 74px;
-  width: 79px;
-  color: #efefef;
-  font-size: 56px;
+  @media (max-width: 768px) {
+    width: 100%;
+    padding: 30px 0;
+  }
+  @media (max-width: 390px) {
+    width: 100%;
+    padding: 10px 20px 50px 0;
+  }
 `;
 
 const TextContainer = styled.div`
   margin-top: 30px;
   margin-left: 25px;
   display: flex;
+  align-items: center;
   flex-direction: column;
   margin-bottom: 200px;
 `;
 
 const Img = styled.img`
-  height: 74px;
-  width: 79px;
+  height: 200px;
+  width: auto;
 `;
 
 const Title = styled.div`
   color: #00000;
-  font-size: 16px;
+  font-size: 24px;
   margin-top: 10px;
   margin-bottom: 20px;
 `;
@@ -123,5 +89,9 @@ const Text = styled.p`
   height: 77px;
   width: 325px;
   color: #7b7b7b;
-  font-size: 14px;
+  font-size: 16px;
+  @media (max-width: 390px) {
+    width: 100%;
+    padding-right: 20px;
+  }
 `;

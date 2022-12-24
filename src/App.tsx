@@ -1,26 +1,25 @@
-import { BrowserRouter } from "react-router-dom";
-import styled from "styled-components";
-import About from "./modules/About/About";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { FormDetailsProvider } from "./providers/FormValuesContext";
+import DressMe from "./modules/DressMe/DressMe";
+import Footer from "./modules/Footer/Footer";
 import Header from "./modules/Header/Header";
-import Home from "./modules/Home/Home";
-import HowItWorks from "./modules/HowItWorks/HowItWorks";
+import HomePage from "./modules/HomePage";
+import SuccessPage from "./modules/Success/SuccessPage";
 
 function App() {
   return (
     <BrowserRouter>
-      <AppContainer>
+      <FormDetailsProvider>
         <Header />
-        <Home />
-        <HowItWorks />
-        <About />
-      </AppContainer>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="form-section" element={<DressMe />} />
+          <Route path="success-section" element={<SuccessPage />} />
+        </Routes>
+      </FormDetailsProvider>
+      <Footer />
     </BrowserRouter>
   );
 }
 
 export default App;
-
-const AppContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-`;

@@ -1,30 +1,41 @@
 import styled from "styled-components";
 import Card from "./Card";
+import whoIsItFor from "../../../images/whoIsItFor.png";
+import HowIGotHere from "../../../images/HowIGotHere.png";
+import WhatIStandFor from "../../../images/WhatIStandFor.png";
+
+export interface CardProps {
+  imageUrl: any;
+  title: string;
+  text: string;
+}
+
+const cards: CardProps[] = [
+  {
+    imageUrl: WhatIStandFor,
+    title: "What I Stand For",
+    text: "It’s my mission to change the way people find clothes they love by combining technology with my personal touch. I'm here to help you save time, look great and evolve your personal style over time.",
+  },
+  {
+    imageUrl: HowIGotHere,
+    title: "How I got here",
+    text: "I noticed a need around my friends and family, who said that buying clothes is like to do another task for them. So I taught why there's no service for this people? similar to other service's: closet organization, cleaning, laundry etc..",
+  },
+  {
+    imageUrl: whoIsItFor,
+    title: "Who is it for",
+    text: "the service is suitable for people that don't like to do shopping, don't have time to do shopping, don't understand how this 'Shopping Online' thing work and who want to feel and look great!",
+  },
+];
 
 const Cards = () => {
-  const cards = [
-    {
-      imageUrl: "https://i.pinimg.com/564x/34/4f/ab/344fabadbf096629aea1df4ce0bc6979.jpg",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. enim.",
-    },
-    {
-      imageUrl: "https://i.pinimg.com/564x/95/f0/84/95f0843f3769ebea8c76c7c56a871f16.jpg",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. enim.",
-    },
-    {
-      imageUrl: "https://i.pinimg.com/564x/52/29/df/5229dfbd0d6168853308f89750df9510.jpg",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. enim.",
-    },
-    {
-      imageUrl: "https://i.pinimg.com/564x/f8/98/e1/f898e146b41b1892ef3d212d259093d5.jpg",
-      text: "Lorem ipsum dolor sit amet consectetur adipisicing elit. enim.",
-    },
-  ];
-
-  const renderCards = () =>
-    cards.map(({ imageUrl, text }) => <Card imageUrl={imageUrl} text={text} />);
-
-  return <Container>{renderCards()}</Container>;
+  return (
+    <Container>
+      {cards.map(({ imageUrl, title, text }, index) => (
+        <Card imageUrl={imageUrl} title={title} key={index} text={text} />
+      ))}
+    </Container>
+  );
 };
 
 export default Cards;
@@ -34,4 +45,8 @@ const Container = styled.div`
   margin-top: 10px;
   flex-direction: row;
   justify-content: space-between;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;

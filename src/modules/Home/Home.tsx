@@ -1,19 +1,16 @@
 import styled from "styled-components";
 import Content from "./Content";
-import { SectionContainer } from "../../components/General.styled";
+import { SectionContainer } from "../../components/common/SectionContainer";
+import { PINKBACKGROUND } from "../../components/Colors";
 
 const Home = () => {
   return (
-    <Container id="home-section">
-      <MainContainer>
-        <Content />
-        <ImageContainer>
-          <Image
-            src="https://i.pinimg.com/564x/e5/fa/b3/e5fab38a3300f8cd38e7a13443b09212.jpg"
-            alt="a"
-          />
-        </ImageContainer>
-      </MainContainer>
+    <Container id="/">
+      <Image
+        src="https://www.shutterstock.com/shutterstock/photos/1293384706/display_1500/stock-photo-woman-choosing-outfit-from-large-wardrobe-closet-with-stylish-clothes-and-home-stuff-1293384706.jpg"
+        alt="a"
+      />
+      <Content />
     </Container>
   );
 };
@@ -24,18 +21,19 @@ const Container = styled(SectionContainer)`
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #fff7f4;
-`;
-
-const MainContainer = styled.div`
-  display: flex;
-`;
-
-const ImageContainer = styled.div`
-  width: 50%;
+  flex-direction: column;
+  background-color: ${PINKBACKGROUND};
+  @media (max-width: 768px) {
+    height: 100%;
+  }
 `;
 
 const Image = styled.img`
-  height: 370px;
-  border-radius: 30px;
+  height: 100vh;
+  opacity: 0.7;
+  @media (max-width: 768px) {
+    width: 768px;
+    height: auto;
+    padding-top: 140px;
+  }
 `;
