@@ -56,15 +56,16 @@ const Container = styled.div`
   }
 `;
 
-const PageLabel = styled.p`
+const PageLabel = styled.h1`
   color: gray;
   font-size: 15px;
   margin-bottom: 10px;
   width: 400px;
 `;
 
-const TextRow = styled.h1`
+const TextRow = styled.div`
   font-size: 40px;
+  font-weight: bold;
   letter-spacing: 1px;
   @media (max-width: 768px) {
     width: 332px;

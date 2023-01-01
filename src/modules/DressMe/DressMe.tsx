@@ -15,6 +15,7 @@ import { GRAYBACKGROUND } from "../../components/Colors";
 const DressMe = () => {
   const navigate = useNavigate();
   const formDetails = useFormDetails();
+  console.log("formDetails in dressme page", formDetails);
 
   useEffect(() => {
     window.scrollTo(0, 0);

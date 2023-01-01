@@ -28,8 +28,8 @@ const Icons = () => {
   return (
     <Container>
       {icons.map(({ ImageUrl, alt, urlAdress }, index) => (
-        <a href={urlAdress}>
-          <Image key={index} src={ImageUrl} alt={alt} />
+        <a key={index} href={urlAdress}>
+          <Image src={ImageUrl} alt={alt} />
         </a>
       ))}
     </Container>

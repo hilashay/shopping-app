@@ -11,6 +11,7 @@ export const useFormDetails = () => {
 };
 
 export const FormDetailsProvider = ({ children }: { children: any }) => {
+  console.log("children", children);
   const [state, setState] = useState({});
   return (
     <MyContext.Provider value={{ formValues: state, setFormValues: setState }}>
