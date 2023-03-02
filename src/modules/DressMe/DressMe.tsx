@@ -15,11 +15,22 @@ import { GRAYBACKGROUND } from "../../components/Colors";
 const DressMe = () => {
   const navigate = useNavigate();
   const formDetails = useFormDetails();
-  console.log("formDetails in dressme page", formDetails);
+  // console.log("formDetails in dressme page", formDetails);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  // useEffect(() => {
+  //   const request = async () => {
+  //     // const res = await fetch("https://www.google.com");
+  //     const res = await fetch("http://localhost:3000");
+  //     console.log("res1", res);
+  //   };
+
+  //   request();
+  // }, []);
+
   return (
     <Container id="form-section">
       <Title>Dress me</Title>
@@ -28,15 +39,33 @@ const DressMe = () => {
         initialValues={initialValues}
         // validate={validate}
         enableReinitialize={true}
-        onSubmit={(values) => {
+        onSubmit={async (values) => {
           formDetails.setFormValues(values);
           alert(JSON.stringify(values));
-          navigate("/success-section");
+          try {
+            console.log("here");
+            const res = await fetch("http://localhost:3000/form-section", {
+              method: "POST", // or 'PUT'
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                ...values,
+              }),
+            });
+            console.log("res", res);
+
+            const body = await res.json();
+            console.log("body ", body);
+            navigate("/success-section");
+          } catch (error) {
+            console.log("Error:", error);
+            // setIsError(true);
+          }
+          // navigate("/success-section");
         }}
       >
         {(formik) => {
-          console.log("formik", formik.values);
-
           return (
             <FormContainer>
               <StyledForm>

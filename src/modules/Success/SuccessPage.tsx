@@ -7,8 +7,8 @@ import { Span } from "../../components/common/Span";
 
 const SuccessPage = () => {
   const values = useContext<any>(MyContext);
+
   const keysAndValues: any = Object.entries(values.formValues);
-  console.log("keysAndValues", keysAndValues);
 
   return (
     <MainContainer>

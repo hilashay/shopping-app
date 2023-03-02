@@ -24,7 +24,6 @@ export const Nav = () => {
             to={`/${path}`}
             isActive={active === label}
             onClick={() => {
-              console.log("label", label);
               setActive(label);
             }}
           >

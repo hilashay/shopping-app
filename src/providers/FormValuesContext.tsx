@@ -1,6 +1,5 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
-//
 export const MyContext = React.createContext<{ formValues: object; setFormValues?: Function }>({
   formValues: {},
 });
@@ -11,8 +10,8 @@ export const useFormDetails = () => {
 };
 
 export const FormDetailsProvider = ({ children }: { children: any }) => {
-  console.log("children", children);
   const [state, setState] = useState({});
+
   return (
     <MyContext.Provider value={{ formValues: state, setFormValues: setState }}>
       {children}

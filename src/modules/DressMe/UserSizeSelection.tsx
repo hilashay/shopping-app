@@ -3,7 +3,9 @@ import { pantsSizes, shirtSizes } from "./sizeOptions";
 import { Field, useField } from "formik";
 
 const UserSizeSelection = () => {
-  const createOptionElement = ({ value, label }: any) => <option value={value} label={label} />;
+  const createOptionElement = ({ value, label }: any) => (
+    <option key={label} value={value} label={label} />
+  );
   const [value, meta, shirtSizeHelpers] = useField("shirtSize");
   const [value2, meta2, pantsSizeHelpers] = useField("pantsSize");
 
